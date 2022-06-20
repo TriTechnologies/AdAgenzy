@@ -1,1 +1,106 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.max-h-w {
+  height: 100vh;
+  width: 100vw;
+}
+.container {
+  max-width: 99%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  display: none;
+}
+label {
+  text-align: left;
+  color: #133a61;
+  font-size: 18px;
+  font-weight: bold;
+}
+input {
+  outline: none;
+  border: none;
+  width: 100%;
+}
+.overlay {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.overlay:hover {
+  transform: translateY(-10px);
+}
+.bulge {
+  box-shadow: transparent;
+  color: #133a61;
+  transform: scale(1);
+}
+.bulge:hover {
+  box-shadow: 0px 0rem 0rem 2px rgb(255 0 0);
+  color: red;
+  transform: scale(1.05);
+  transition: all 300ms ease-in;
+}
+.btn.btn-primary {
+  background-color: #0e3358;
+  border-color: transparent;
+}
+.btn.btn-primary:hover {
+  background-color: #115bbb;
+  border-color: transparent;
+}
+button.btn.btn-primary[disabled] {
+  opacity: 30%;
+}
+
+.circularLoader{
+  height: 50px;
+  width: 50px;
+  margin-top: 100%;
+  opacity: 1;
+  background-color: transparent;
+  border: 5px solid #f3f3f3; /* Light grey */
+  border-top: 5px solid #0D3256;
+  border-radius: 50%;
+}
+
+.noborder {
+  border: none;
+}
+
+.btn-file {
+  border: none;
+  background-color: #daeffc;
+  border-radius: 10px;
+}
+.btn-file:hover {
+  background-color: #bee1f6;
+}
+
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.8s;
+
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
