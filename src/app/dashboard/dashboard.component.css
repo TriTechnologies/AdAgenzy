@@ -3,8 +3,8 @@
   }
   
   .progress {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     line-height: 150px;
     background: none;
     margin: 0 auto;
@@ -57,6 +57,7 @@
   
   .progress .progress-right {
     right: 0;
+  
   }
   
   .progress .progress-right .progress-bar {

@@ -50,8 +50,9 @@ input {
   border-color: transparent;
 }
 .btn.btn-primary:hover {
-  background-color: #115bbb;
+  background-color: #184777;
   border-color: transparent;
+  color: #F6FAFF;
 }
 button.btn.btn-primary[disabled] {
   opacity: 30%;
