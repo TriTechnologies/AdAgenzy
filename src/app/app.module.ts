@@ -11,6 +11,9 @@ import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { ProductsComponent } from './products/products.component';
+import { CompetitorsComponent } from './competitors/competitors.component';
+
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { ProductsComponent } from './products/products.component';
     TopNavComponent,
     HomeComponent,
     DashboardComponent,
-    ProductsComponent
+    ProductsComponent,
+    CompetitorsComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

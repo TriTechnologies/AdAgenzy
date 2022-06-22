@@ -7,31 +7,42 @@
   color: #124274;
 }
 
-.tablebtn{
-    background-color: #C7DEF5 !important;
+.tablebtn {
+  background-color: #C7DEF5 !important;
 }
 
-.tablebtn:hover{
-    background-color: #184777 !important;
+.tablebtn:hover {
+  background-color: #184777 !important;
 }
 
-.btntable{
-    background-color: #EDF5FF !important;
+.btntable {
+  background-color: #EDF5FF !important;
 }
 
-.tablebtnSecondary{
-    background-color: #4A82BC !important;
-    color: white;
+.tablebtnSecondary {
+  background-color: #4A82BC !important;
+  color: white;
 }
 
 .tablebtnSecondary:hover {
-    color: #184777 !important;
-    background-color: #C7DEF5 !important;
+  color: #184777 !important;
+  background-color: #C7DEF5 !important;
 }
 
-td, tr{
-    text-align: center;
-    border-bottom: solid 1px #C7DEF5;
+.tablebtnTop {
+  background-color: #184777 !important;
+  color: white;
+}
+
+.tablebtnTop:hover {
+  color: #184777 !important;
+  background-color: #C7DEF5 !important;
+}
+
+td,
+tr {
+  text-align: center;
+  border-bottom: solid 1px #C7DEF5;
 }
 
 p {
@@ -50,6 +61,7 @@ p {
 .tableStyle {
   background-color: #EDF5FF;
   border-radius: 10px;
+  font-size: 90%;
 }
 
 table th:first-child {
