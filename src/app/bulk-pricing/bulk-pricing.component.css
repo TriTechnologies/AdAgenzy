@@ -1,0 +1,92 @@
+.TopContainer {
+  margin-top: -40px;
+}
+
+.btn {
+  background-color: #DEEBF9;
+  color: #124274;
+}
+
+.btnbtn {
+  background-color: #F45151 !important;
+  color: white;
+}
+
+.btnbtn:hover {
+  background-color: #124274 !important;
+  color: white;
+}
+
+.btnnewbtn {
+  background-color: #124274 !important;
+  color: white;
+}
+
+.btnnewbtn:hover {
+  background-color: black !important;
+  color: white;
+}
+
+h5,
+p {
+  color: #124274;
+}
+
+.TableDiv {
+  background-color: white;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 1px;
+}
+
+.tableStyle {
+  background-color: #EDF5FF;
+  border-radius: 10px;
+  font-size: 90%;
+}
+
+table th:first-child {
+  border-radius: 10px 0 0 0;
+}
+
+table th:last-child {
+  border-radius: 0 10px 0 0;
+}
+
+table th {
+  color: #124274;
+}
+
+thead {
+  background-color: #C7DEF5;
+}
+
+.tablebtn {
+  background-color: #C7DEF5 !important;
+}
+
+.tablebtn:hover {
+  background-color: #184777 !important;
+}
+
+.btntable {
+  background-color: #EDF5FF !important;
+}
+
+.tablebtnSecondary {
+  background-color: #4A82BC !important;
+  color: white;
+}
+
+.tablebtnSecondary:hover {
+  color: #184777 !important;
+  background-color: #C7DEF5 !important;
+}
+
+td,
+tr {
+  text-align: center;
+  border-bottom: solid 2px #C7DEF5;
+}

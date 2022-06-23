@@ -1,79 +1,90 @@
 a {
-    color: #F6FAFF;
-    width: 110%;
-    border-radius: 20px 0 0 20px;
+  color: #F6FAFF;
+  width: 110%;
+  border-radius: 20px 0 0 20px;
+}
+
+a:hover {
+  background: #F6FAFF;
+  color: #184777;
+  border-radius: 20px 0 0 20px;
+  /*box-shadow: 35px 35px 0 10px white;*/
+}
+
+.anchorTagsDiv a:hover{
+  background-color: #184777 !important;
+  color: white !important;
+}
+
+.anchorTagsDiv .active{
+  background-color: #184777 !important;
+  color: white !important;
+  /* height: auto;
+  width: 150%; */
+}
+
+.active {
+  background-color: #F6FAFF !important;
+  color: #184777 !important;
+  fill: #184777;
+  font-weight: bold;
+  border-radius: 20px 0 0 20px;
+  /*box-shadow: 35px 35px 0 10px var(--white);*/
+}
+
+ul {
+  list-style: none;
+}
+
+.act-2:hover {
+  fill: #F6FAFF;
+  stroke: #184777;
+  border-radius: 20px 0 0 20px;
+
+}
+
+.ico {
+  width: 25px;
+  height: 25px;
+}
+
+
+.move-right {
+  opacity: 1;
+  animation-name: moveRightOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.8s;
+
+}
+
+.Dashboard {
+  width: 108%;
+  background: url('../../assets/DashboadWhite.svg') no-repeat;
+  background-size: contain;
+}
+
+.Dashboard:hover {
+  width: 108%;
+  background: url('../../assets/DashboardBlue.svg') no-repeat;
+  background-size: contain;
+}
+
+@keyframes moveRightOpacity {
+  from {
+    transform: translateX(-100%);
   }
-  
-  a:hover {
-    background: #F6FAFF;
-    color: #184777;
-    border-radius: 20px 0 0 20px;
-    /*box-shadow: 35px 35px 0 10px white;*/
+
+  to {
+    transform: translateX(0%);
   }
-  
-  .active {
-    background-color: #F6FAFF !important;
-    color: #184777 !important;
-    fill: #184777;
-    font-weight: bold;
-    border-radius: 20px 0 0 20px;
-    /*box-shadow: 35px 35px 0 10px var(--white);*/
+
+  0% {
+    opacity: 0;
   }
-  
-  ul{
-    list-style: none;
-  }
-  
-  .act-2:hover {
-    fill: #F6FAFF;
-    stroke: #184777;
-    border-radius: 20px 0 0 20px;
-  
-  }
-  
-  .ico {
-    width: 25px;
-    height: 25px;
-  }
-  
-  
-  .move-right {
+
+  100% {
     opacity: 1;
-    animation-name: moveRightOpacity;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 0.8s;
-  
   }
-  
-  .Dashboard {
-    width: 108%;
-    background: url('../../assets/DashboadWhite.svg') no-repeat;
-    background-size: contain;
-  }
-  
-  .Dashboard:hover {
-    width: 108%;
-    background: url('../../assets/DashboardBlue.svg') no-repeat;
-    background-size: contain;
-  }
-  
-  @keyframes moveRightOpacity {
-    from {
-      transform: translateX(-100%);
-    }
-  
-    to {
-      transform: translateX(0%);
-    }
-  
-    0% {
-      opacity: 0;
-    }
-  
-    100% {
-      opacity: 1;
-    }
-  
-  }
-  
+
+}

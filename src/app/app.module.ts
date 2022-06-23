@@ -14,6 +14,9 @@ import { ProductsComponent } from './products/products.component';
 import { CompetitorsComponent } from './competitors/competitors.component';
 
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ManualPricingComponent } from './manual-pricing/manual-pricing.component';
+
+import { BulkPricingComponent } from './bulk-pricing/bulk-pricing.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     DashboardComponent,
     ProductsComponent,
     CompetitorsComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    ManualPricingComponent,
+    BulkPricingComponent
   ],
   imports: [
     BrowserModule,

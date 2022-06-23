@@ -31,7 +31,7 @@
 
 td, tr{
     text-align: center;
-    border-bottom: solid 1px #C7DEF5;
+    border-bottom: solid 2px #C7DEF5;
 }
 
 p {
@@ -50,6 +50,7 @@ p {
 .tableStyle {
   background-color: #EDF5FF;
   border-radius: 10px;
+  font-size: 90%;
 }
 
 table th:first-child {

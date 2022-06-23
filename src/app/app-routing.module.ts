@@ -8,6 +8,9 @@ import { ProductsComponent } from './products/products.component';
 import { CompetitorsComponent } from './competitors/competitors.component';
 
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ManualPricingComponent } from './manual-pricing/manual-pricing.component';
+
+import { BulkPricingComponent } from './bulk-pricing/bulk-pricing.component';
 
 const routes: Routes = [
   {
@@ -34,6 +37,14 @@ const routes: Routes = [
       {
         path: "productdetails",
         component: ProductDetailsComponent
+      },
+      {
+        path: "manualpricing",
+        component: ManualPricingComponent
+      },
+      {
+        path: "bulkpricing",
+        component: BulkPricingComponent
       }
     ]
   },

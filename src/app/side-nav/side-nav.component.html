@@ -1,8 +1,7 @@
 <div class="d-flex flex-column move-right flex-shrink-0 p-3 text-white"
   style="width: 230px; height: 100vh; background-color: #184777; border-radius: 0 35px 35px 0;">
 
-  <div
-    class="d-flex justify-content-center align-items-center ms-2 mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+  <div class="d-flex justify-content-center align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
     <img src="../../assets/Logo White.svg" style="width: 200px; height: 100px; align-items: center; padding-top: 10px;">
   </div>
 
@@ -30,7 +29,8 @@
     </li>
 
     <li class="nav-item pb-2">
-      <a class="nav-link d-flex justify-content-start align-items-center" [routerLinkActive]="['active']" routerLink="/home/products">
+      <a class="nav-link d-flex justify-content-start align-items-center" [routerLinkActive]="['active']"
+        routerLink="/home/products">
 
         <svg class="ico" style="margin-right: 15px;" width="38" height="30" viewBox="0 0 38 30" fill="none"
           xmlns="http://www.w3.org/2000/svg" routerLinkActive="act-2">
@@ -48,7 +48,8 @@
     </li>
 
     <li class="nav-item pb-2">
-      <a class="nav-link d-flex justify-content-start align-items-center" routerLink="/home/competitors" [routerLinkActive]="['active']">
+      <a class="nav-link d-flex justify-content-start align-items-center" routerLink="/home/competitors"
+        [routerLinkActive]="['active']">
 
         <svg routerLinkActive="act-2" class="ico" width="37" height="37" style="margin-right: 15px;" viewBox="0 0 37 37"
           fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,8 +74,8 @@
     </li>
 
     <li class="nav-item pb-2">
-      <a class="ico" role="button" data-bs-toggle="collapse" href="#mul" aria-expanded="false" aria-controls="mul"
-        class="nav-link d-flex justify-content-start align-items-center" [routerLinkActive]="['active']">
+      <a data-bs-toggle="collapse" type="button" data-bs-target="#mul" aria-expanded="false"
+        aria-controls="mul" class="nav-link d-flex justify-content-start align-items-center">
 
         <svg routerLinkActive="act-2" class="ico" style="margin-right: 15px;" width="35" height="28" viewBox="0 0 35 28"
           fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -84,17 +85,22 @@
           <path d="M15 3L3 15L12 24" stroke="currentColor" fill="white" fill stroke-width="3" />
         </svg>
 
-
         Repricing
       </a>
-      <ul class="collapse ms-4" id="mul" style="list-style-type: disc;">
-        <li>
-          Manual Repricing
-        </li>
-        <li>
-          Bulk Repricing
-        </li>
-      </ul>
+      <div id="mul" class="anchorTagsDiv">
+        <ul style="list-style-type: disc; font-size: 90%;">
+          <a role="button" [routerLinkActive]="['active']" class="nav-link align-items-end" routerLink="/home/manualpricing">
+            <li>
+              Manual Repricing
+            </li>
+          </a>
+          <a role="button" routerLink="/home/bulkpricing" class="nav-link align-items-end" role="button" [routerLinkActive]="['active']">
+            <li>
+              Bulk Repricing
+            </li>
+          </a>
+        </ul>
+      </div>
     </li>
 
     <li class="nav-item pb-2">
@@ -139,7 +145,6 @@
           <path d="M21.5 10.0091L29 5.50909V12.0091C26.962 10.2287 25.2735 9.84418 21.5 10.0091Z" fill="currentColor" />
         </svg>
 
-
         Email Alerts
       </a>
     </li>
@@ -179,14 +184,13 @@
           <rect y="22" width="3" height="3" fill="currentColor" />
         </svg>
 
-
         My Account
       </a>
     </li>
   </ul>
 
   <div class="nav-item pb-2 ms-4">
-    <p class="ico" class="nav-link d-flex justify-content-start align-items-center" style="color: white;">
+    <a class="ico" class="nav-link d-flex justify-content-start align-items-center" [routerLinkActive]="['active']">
 
       <svg style="margin-right: 15px;" routerLinkActive="act-2" class="ico" width="27" height="32" viewBox="0 0 27 32"
         fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -196,7 +200,7 @@
         <path d="M8 9.50671L0 15.5067L8 21.5067V17.0067H16V14.0067H8V9.50671Z" fill="currentColor" />
       </svg>
 
-
-      Sign Out</p>
+      Sign Out
+    </a>
   </div>
 </div>
