@@ -90,3 +90,27 @@ tr {
   text-align: center;
   border-bottom: solid 2px #C7DEF5;
 }
+
+.CardBodySection {
+  background-color: #E5EEF8;
+  border-radius: 9px;
+}
+
+.form-select {
+  border-radius: 30px;
+  background-color: #D7E8FB;
+  border: 1px solid #184777;
+}
+
+.collapseDiv {
+  width: 20%;
+  border-radius: 9px;
+  position: fixed;
+}
+
+.FormBtn{
+  border-radius: 24px;
+  background-color: #124274 !important;
+  color: white;
+  width: 35% !important;
+}

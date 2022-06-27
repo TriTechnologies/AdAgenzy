@@ -17,6 +17,10 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { ManualPricingComponent } from './manual-pricing/manual-pricing.component';
 
 import { BulkPricingComponent } from './bulk-pricing/bulk-pricing.component';
+import { IntegrationsComponent } from './integrations/integrations.component';
+
+import { WooCommerceComponent } from './woo-commerce/woo-commerce.component';
+import { MyAccountComponent } from './my-account/my-account.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,10 @@ import { BulkPricingComponent } from './bulk-pricing/bulk-pricing.component';
     CompetitorsComponent,
     ProductDetailsComponent,
     ManualPricingComponent,
-    BulkPricingComponent
+    BulkPricingComponent,
+    IntegrationsComponent,
+    WooCommerceComponent,
+    MyAccountComponent
   ],
   imports: [
     BrowserModule,

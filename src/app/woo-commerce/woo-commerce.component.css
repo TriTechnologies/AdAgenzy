@@ -1,0 +1,49 @@
+.TopContainer {
+  margin-top: -40px;
+}
+
+.btn {
+  background-color: #DEEBF9;
+  color: #124274;
+}
+
+.form-label{
+    font-weight: lighter;
+    color: #184777;
+    font-size: medium;
+}
+
+.TableDiv {
+  background-color: white;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 1px;
+}
+
+.form-control{
+    border-radius: 53px;
+    background-color: #DEEBF9;
+}
+
+.DangerBtn{
+    background-color: #E74D4D;
+    border-radius: 43px;
+    color: white;
+    width: 150px;
+}
+
+.DangerBtn:hover{
+    background-color: #DEEBF9;
+    border-radius: 43px;
+    border: solid 1px #DEEBF9;
+    color: black;
+}
+
+.saveBtn{
+    background-color: #4282C5;
+    border-radius: 43px;
+    color: white;
+    width: 130px;
+}

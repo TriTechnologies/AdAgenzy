@@ -1,117 +1,146 @@
-<!-- Top Section of Bulk Pricing -->
-<div class="TopContainer ms-5">
-  <h3 class="font-weight-bold">Bulk Pricing</h3>
-</div>
+<div class="container">
 
-<!-- Button and Toggles -->
-<div class="Button ms-5 mt-5">
+  <!-- Top Section of Bulk Pricing -->
+  <div class="TopContainer ms-5">
+    <h3 class="font-weight-bold">Bulk Pricing</h3>
+  </div>
 
-  <button class="btn btn-primary btn-md dropdown-toggle" data-bs-toggle="dropdown" style="border-radius: 20px;">
-    Select Competitors
-  </button>
+  <!-- Button and Toggles -->
+  <div class="Button ms-5 mt-5">
 
-  <button class="btn btn-primary btn-md ms-3 btnnewbtn" style="border-radius: 20px;">
-    3-Nordik.dk
-  </button>
+    <button class="btn btn-primary btn-md" data-bs-toggle="collapse" data-bs-target="#FiltersCollapse"
+    aria-expanded="false" aria-controls="FiltersCollapse" style="border-radius: 20px;">
+      Select Competitors
+    </button>
 
-  <button class="btn btn-primary btn-md ms-3 btnnewbtn" style="border-radius: 20px;">
-    AllBuy.dk
-  </button>
+    <button class="btn btn-primary btn-md ms-3 btnnewbtn" style="border-radius: 20px;">
+      3-Nordik.dk
+    </button>
 
-  <button class="btn btn-primary btn-md ms-3 btnnewbtn" style="border-radius: 20px;">
-    AmazingLiving.com
-  </button>
+    <button class="btn btn-primary btn-md ms-3 btnnewbtn" style="border-radius: 20px;">
+      AllBuy.dk
+    </button>
 
-</div>
+    <button class="btn btn-primary btn-md ms-3 btnnewbtn" style="border-radius: 20px;">
+      AmazingLiving.com
+    </button>
 
-<!-- Bottom Text Section of Bulk Pricing -->
-<div class="ms-5 mt-5">
+  </div>
 
-  <h5 class="mb-4"><b>Bulk Pricing is a Powerfull Tool. Handle it with care and at your own risk.</b></h5>
+  <!-- DropDown Menu -->
+  <div class="collapse collapseDiv ms-5 mt-2 shadow-lg" id="FiltersCollapse">
+    <div class="card card-body CardBodySection">
+      <!-- Drop Down for Filters -->
+      <form>
 
-  <p class="mb-4">With this tool you are enabling a robot to work for you - all day and night.</p>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault" style="font-size: medium; font-weight: lighter;">
+                Competetior List
+              </label>
+            </div>
+          </div>
+        </div>
 
-  <h5 class="mb-3">Repricing is <b>Enabled</b></h5>
+        <div class="mt-3 d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary-form FormBtn">Apply</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
-</div>
+  <!-- Bottom Text Section of Bulk Pricing -->
+  <div class="ms-5 mt-5">
 
-<!-- Button and Toggles -->
-<div class="Button ms-5">
+    <h5 class="mb-4"><b>Bulk Pricing is a Powerfull Tool. Handle it with care and at your own risk.</b></h5>
 
-  <button class="btn btn-primary btn-md btnbtn" style="border-radius: 20px;">
-    <svg width="25" height="25" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink">
-      <rect width="28" height="28" fill="url(#pattern0)" />
-      <defs>
-        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-          <use xlink:href="#image0_191_1281" transform="scale(0.0104167)" />
-        </pattern>
-        <image id="image0_191_1281" width="96" height="96"
-          xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABmJLR0QA/wD/AP+gvaeTAAACPklEQVR4nO3cS24TQRSF4Wo2ELEVGCRDJgiJDZEZDNkaE3YCMis4DJySrlp+1Ktd93b/n5SZH+X/2HLkWEkJAAAAAAAAAAAAMUl6lfQ8+xy9JD1Lep19jiqSfujsJOll9nlaSfoo6e/bY/k5+zxFTHxFHmEVXyFGuBA/5AhX4vse4Ub8UCPcie9zBJ3fcEuc5PiNWec33FPhY/Hzxizpg6Q/FSO4eyWo7Jnv94kUeYTw8bOII+wmfhZphN3FzyKMsNv4mecRdh8/8zjCYeJnnkY4XPzMwwiHjZ/NHOHw8bMZIxB/5ZEjEP+KR4xA/Du2HIH4hbYYgfiVRo5A/EYjRiB+p54RiD9IywjEH0x1f5c9VV6W+CVU90og/hYGjkD8VgNGIH6vjhGIP0rDCGHiv5t9gELL20/tddBLdb/nr18F0793FFpHfEboNSA+I7QaGJ8RaomPIuZRwwdrcvCVl11oiW+uywg9euKb22CEFiPim9tihBoj45vbZIQSW8Q3t80It2wZ39wHI1zyiPjmvhjBemR8c5+MkNLcr44cfoSZ8c0ZjjmCh/jmLMcawVN8c6ZjjOAxvjnbvkfwHN+ccZ8jRIhvzrqvESLFN2fexwgR42fhR4gcP5s1wqgvZn1OKb0vuNy/lNKXZVl+DbrfYZZl+Z1S+prOZ7znKaX0adsTVZL0LeIzf63wlfB99jkvujFCiPjZnRF8xs8ujBAqfnZlBN/xMzNCyPjZaoQY8TPxz7sBAAAAAAAAAADgwX9xO0bFalGNIgAAAABJRU5ErkJggg==" />
-      </defs>
-    </svg>
+    <p class="mb-4">With this tool you are enabling a robot to work for you - all day and night.</p>
 
-    Cancel
-  </button>
+    <h5 class="mb-3">Repricing is <b>Enabled</b></h5>
 
-  <button class="btn btn-primary btn-md ms-3 btnnewbtn" style="border-radius: 20px;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check-lg"
-      viewBox="0 0 16 16">
-      <path
-        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-    </svg>
-    Reprice All Products
-  </button>
+  </div>
 
-</div>
+  <!-- Button and Toggles -->
+  <div class="Button ms-5">
 
-<!-- Button and Toggles -->
-<div class="Button ms-5 mt-5">
+    <button class="btn btn-primary btn-md btnbtn" style="border-radius: 20px;">
+      <svg width="25" height="25" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <rect width="28" height="28" fill="url(#pattern0)" />
+        <defs>
+          <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_191_1281" transform="scale(0.0104167)" />
+          </pattern>
+          <image id="image0_191_1281" width="96" height="96"
+            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABmJLR0QA/wD/AP+gvaeTAAACPklEQVR4nO3cS24TQRSF4Wo2ELEVGCRDJgiJDZEZDNkaE3YCMis4DJySrlp+1Ktd93b/n5SZH+X/2HLkWEkJAAAAAAAAAAAAMUl6lfQ8+xy9JD1Lep19jiqSfujsJOll9nlaSfoo6e/bY/k5+zxFTHxFHmEVXyFGuBA/5AhX4vse4Ub8UCPcie9zBJ3fcEuc5PiNWec33FPhY/Hzxizpg6Q/FSO4eyWo7Jnv94kUeYTw8bOII+wmfhZphN3FzyKMsNv4mecRdh8/8zjCYeJnnkY4XPzMwwiHjZ/NHOHw8bMZIxB/5ZEjEP+KR4xA/Du2HIH4hbYYgfiVRo5A/EYjRiB+p54RiD9IywjEH0x1f5c9VV6W+CVU90og/hYGjkD8VgNGIH6vjhGIP0rDCGHiv5t9gELL20/tddBLdb/nr18F0793FFpHfEboNSA+I7QaGJ8RaomPIuZRwwdrcvCVl11oiW+uywg9euKb22CEFiPim9tihBoj45vbZIQSW8Q3t80It2wZ39wHI1zyiPjmvhjBemR8c5+MkNLcr44cfoSZ8c0ZjjmCh/jmLMcawVN8c6ZjjOAxvjnbvkfwHN+ccZ8jRIhvzrqvESLFN2fexwgR42fhR4gcP5s1wqgvZn1OKb0vuNy/lNKXZVl+DbrfYZZl+Z1S+prOZ7znKaX0adsTVZL0LeIzf63wlfB99jkvujFCiPjZnRF8xs8ujBAqfnZlBN/xMzNCyPjZaoQY8TPxz7sBAAAAAAAAAADgwX9xO0bFalGNIgAAAABJRU5ErkJggg==" />
+        </defs>
+      </svg>
 
-  <button class="btn btn-primary btn-md" style="border-radius: 20px;">
-    + Add Rule
-  </button>
+      Cancel
+    </button>
 
-</div>
+    <button class="btn btn-primary btn-md ms-3 btnnewbtn" style="border-radius: 20px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check-lg"
+        viewBox="0 0 16 16">
+        <path
+          d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+      </svg>
+      Reprice All Products
+    </button>
 
-<div class="ms-5 me-5">
+  </div>
+
+  <!-- Button and Toggles -->
+  <div class="Button ms-5 mt-5">
+
+    <button class="btn btn-primary btn-md" style="border-radius: 20px;">
+      + Add Rule
+    </button>
+
+  </div>
+
+  <div class="ms-5 me-5">
 
     <table class="table tableStyle table-borderless table-sm mt-3">
-        <thead>
-          <tr>
-            <th scope="col">Title</th>
-            <th scope="col">Type</th>
-            <th scope="col">Priority</th>
-            <th scope="col">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Default</td>
-            <td>Suggestion</td>
-            <td>0</td>
-            <td>
-              <button class="btn btn-sm btntable" routerLink="/home/productdetails">
-                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M11 0C4.928 0 0 4.928 0 11C0 17.072 4.928 22 11 22C17.072 22 22 17.072 22 11C22 4.928 17.072 0 11 0ZM12.1 16.5H9.9V9.9H12.1V16.5ZM12.1 7.7H9.9V5.5H12.1V7.7Z"
-                    fill="#184777" />
-                </svg>
-    
-              </button>
+      <thead>
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Type</th>
+          <th scope="col">Priority</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Default</td>
+          <td>Suggestion</td>
+          <td>0</td>
+          <td>
+            <button class="btn btn-sm btntable" routerLink="/home/productdetails">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11 0C4.928 0 0 4.928 0 11C0 17.072 4.928 22 11 22C17.072 22 22 17.072 22 11C22 4.928 17.072 0 11 0ZM12.1 16.5H9.9V9.9H12.1V16.5ZM12.1 7.7H9.9V5.5H12.1V7.7Z"
+                  fill="#184777" />
+              </svg>
 
-              <button class="btn btn-sm btntable">
-                <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M16.25 15H21.25V17.5H16.25V15ZM16.25 5H25V7.5H16.25V5ZM16.25 10H23.75V12.5H16.25V10ZM1.25 17.5C1.25 18.875 2.375 20 3.75 20H11.25C12.625 20 13.75 18.875 13.75 17.5V5H1.25V17.5ZM15 1.25H11.25L10 0H5L3.75 1.25H0V3.75H15V1.25Z"
-                    fill="#184777" />
-                </svg>
-    
-    
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+            </button>
+
+            <button class="btn btn-sm btntable">
+              <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16.25 15H21.25V17.5H16.25V15ZM16.25 5H25V7.5H16.25V5ZM16.25 10H23.75V12.5H16.25V10ZM1.25 17.5C1.25 18.875 2.375 20 3.75 20H11.25C12.625 20 13.75 18.875 13.75 17.5V5H1.25V17.5ZM15 1.25H11.25L10 0H5L3.75 1.25H0V3.75H15V1.25Z"
+                  fill="#184777" />
+              </svg>
+
+
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
 
 </div>

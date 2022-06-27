@@ -1,119 +1,143 @@
 .TopContainer {
-    margin-top: -40px;
-  }
-  
-  .btn {
-    background-color: #DEEBF9;
-    color: #124274;
-  }
-  
-  .tablebtn {
-    background-color: #C7DEF5 !important;
-  }
-  
-  .tablebtn:hover {
-    background-color: #184777 !important;
-  }
-  
-  .btntable {
-    background-color: #EDF5FF !important;
-  }
-  
-  .tablebtnSecondary {
-    background-color: #4A82BC !important;
-    color: white;
-  }
-  
-  .tablebtnSecondary:hover {
-    color: #184777 !important;
-    background-color: #C7DEF5 !important;
-  }
+  margin-top: -40px;
+}
 
-  .modelbtn{
-    background-color: #E9F2FC;
-  }
-  
-  .tablebtnTop {
-    background-color: #184777 !important;
-    color: white;
-  }
-  
-  .tablebtnTop:hover {
-    color: #184777 !important;
-    background-color: #C7DEF5 !important;
-  }
-  
-  td,
-  tr {
-    text-align: center;
-    border-bottom: solid 2px #C7DEF5;
-  }
-  
-  p {
-    color: #184777;
-  }
-  
-  .TableDiv {
-    background-color: white;
-    border-radius: 10px;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 1px;
-  }
-  
-  .tableStyle {
-    background-color: #EDF5FF;
-    border-radius: 10px;
-    font-size: 90%;
-  }
-  
-  table th:first-child {
-    border-radius: 10px 0 0 0;
-  }
-  
-  table th:last-child {
-    border-radius: 0 10px 0 0;
-  }
-  
-  table th {
-    color: #124274;
-  }
-  
-  thead {
-    background-color: #C7DEF5;
-  }
-  
-  .ModelDiv{
-    background-color: #E9F2FC;
-  }
+.btn {
+  background-color: #DEEBF9;
+  color: #124274;
+}
 
-  .modal-content{
-    width: 120%;
-    margin-top: 25%;
-  }
+.tablebtn {
+  background-color: #C7DEF5 !important;
+}
 
-  .divText{
-    color: #184777;
-  }
+.tablebtn:hover {
+  background-color: #184777 !important;
+}
 
-  .form-control{
-    border-radius: 24px;
-  }
+.btntable {
+  background-color: #EDF5FF !important;
+}
 
-  .btn-primary-form{
-    border-radius: 24px;
-    background-color: #F6FAFF;
-    width: 202px;
-    border: solid 1px #184777;
-  }
+.tablebtnSecondary {
+  background-color: #4A82BC !important;
+  color: white;
+}
 
-  ::placeholder {
-    color: #184777;
-    font-style: bold;
-  }
+.tablebtnSecondary:hover {
+  color: #184777 !important;
+  background-color: #C7DEF5 !important;
+}
 
-  .dropdown-menu{
-    background-color: #F6FAFF;
-    border-radius: 9px;
-  }
+.modelbtn {
+  background-color: #E9F2FC;
+}
+
+.tablebtnTop {
+  background-color: #184777 !important;
+  color: white;
+}
+
+.tablebtnTop:hover {
+  color: #184777 !important;
+  background-color: #C7DEF5 !important;
+}
+
+td,
+tr {
+  text-align: center;
+  border-bottom: solid 2px #C7DEF5;
+}
+
+p {
+  color: #184777;
+}
+
+.TableDiv {
+  background-color: white;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 1px;
+}
+
+.tableStyle {
+  background-color: #EDF5FF;
+  border-radius: 10px;
+  font-size: 90%;
+}
+
+table th:first-child {
+  border-radius: 10px 0 0 0;
+}
+
+table th:last-child {
+  border-radius: 0 10px 0 0;
+}
+
+table th {
+  color: #124274;
+}
+
+thead {
+  background-color: #C7DEF5;
+}
+
+.ModelDiv {
+  background-color: #E9F2FC;
+}
+
+.modal-content {
+  width: 120%;
+  margin-top: 25%;
+}
+
+.divText {
+  color: #184777;
+}
+
+.form-control {
+  border-radius: 24px;
+}
+
+.btn-primary-form {
+  border-radius: 24px;
+  background-color: #F6FAFF;
+  width: 202px;
+  border: solid 1px #184777;
+}
+
+.FormBtn{
+  border-radius: 24px;
+  background-color: #124274 !important;
+  color: white;
+  width: 35% !important;
+}
+
+::placeholder {
+  color: #184777;
+  font-style: bold;
+}
+
+.dropdown-menu {
+  background-color: #F6FAFF;
+  border-radius: 9px;
+}
+
+.collapseDiv {
+  width: 20%;
+  border-radius: 9px;
+  position: fixed;
+}
+
+.CardBodySection {
+  background-color: #E5EEF8;
+  border-radius: 9px;
+}
+
+.form-select {
+  border-radius: 30px;
+  background-color: #D7E8FB;
+  border: 1px solid #184777;
+}

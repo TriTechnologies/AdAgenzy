@@ -1,0 +1,21 @@
+.TopContainer {
+  margin-top: -40px;
+}
+
+.btn {
+  background-color: #DEEBF9;
+  color: #124274;
+}
+
+p {
+  color: #184777;
+}
+
+.TableDiv {
+  background-color: white;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 1px;
+}
