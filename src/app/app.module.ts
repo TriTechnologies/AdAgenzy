@@ -22,6 +22,7 @@ import { IntegrationsComponent } from './integrations/integrations.component';
 import { WooCommerceComponent } from './woo-commerce/woo-commerce.component';
 import { MyAccountComponent } from './my-account/my-account.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,7 @@ import { MyAccountComponent } from './my-account/my-account.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -86,6 +86,14 @@ thead {
   position: fixed;
 }
 
+.DropDiv{
+  width: 15%;
+  border-radius: 9px;
+  margin-left: 9%;
+  position: fixed;
+
+}
+
 .FormBtn{
   border-radius: 24px;
   background-color: #124274 !important;

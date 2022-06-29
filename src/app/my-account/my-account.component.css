@@ -5,3 +5,20 @@
 .editicon{
     margin-left: -5%;
 }
+
+.img-thumbnail:hover {
+  border: none;
+  border-radius: 100%;
+  transition: opacity 200ms ease-in;
+}
+
+.img-thumbnail {
+  border: none;
+  border-radius: 100%;
+  background-color: #F6FAFF;
+}
+
+.grow:hover {
+  transform: scale(1.2);
+  transition: all .6s ease-in-out;
+}
