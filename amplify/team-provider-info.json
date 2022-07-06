@@ -14,12 +14,24 @@
     },
     "categories": {
       "auth": {
+<<<<<<< Updated upstream
         "undefined": {}
+=======
+        "adagenzy": {}
+>>>>>>> Stashed changes
       },
       "function": {
         "SaaSProComp": {
           "deploymentBucketName": "amplify-adagenzy-dev-164837-deployment",
+<<<<<<< Updated upstream
           "s3Key": "amplify-builds/SaaSProComp-6f303758734f75537147-build.zip"
+=======
+          "s3Key": "amplify-builds/SaaSProComp-6a31357a6d524e5a4755-build.zip"
+        },
+        "AdAgenzyCRUD": {
+          "deploymentBucketName": "amplify-adagenzy-dev-164837-deployment",
+          "s3Key": "amplify-builds/AdAgenzyCRUD-685745486554362b3445-build.zip"
+>>>>>>> Stashed changes
         }
       }
     }

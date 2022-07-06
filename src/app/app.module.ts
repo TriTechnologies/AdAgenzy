@@ -22,6 +22,7 @@ import { IntegrationsComponent } from './integrations/integrations.component';
 import { WooCommerceComponent } from './woo-commerce/woo-commerce.component';
 import { MyAccountComponent } from './my-account/my-account.component';
 
+import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { MyAccountComponent } from './my-account/my-account.component';
     BulkPricingComponent,
     IntegrationsComponent,
     WooCommerceComponent,
-    MyAccountComponent
+    MyAccountComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,

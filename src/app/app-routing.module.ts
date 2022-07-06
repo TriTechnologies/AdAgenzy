@@ -16,11 +16,18 @@ import { IntegrationsComponent } from './integrations/integrations.component';
 import { WooCommerceComponent } from './woo-commerce/woo-commerce.component';
 import { MyAccountComponent } from './my-account/my-account.component';
 
+import { LoginPageComponent } from './login-page/login-page.component';
+
 const routes: Routes = [
   {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
+  },
+  {
+    path: "loginpage",
+    component: LoginPageComponent,
+    children: []
   },
   {
     path: "home",

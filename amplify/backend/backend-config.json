@@ -4,6 +4,14 @@
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+<<<<<<< Updated upstream
+=======
+    },
+    "AdAgenzyCRUD": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+>>>>>>> Stashed changes
     }
   },
   "auth": {
@@ -46,6 +54,23 @@
           ]
         }
       ]
+<<<<<<< Updated upstream
+=======
+    },
+    "AdAgenzyCRUD": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "AdAgenzyCRUD",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
+>>>>>>> Stashed changes
     }
   },
   "storage": {

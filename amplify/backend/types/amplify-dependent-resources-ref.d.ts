@@ -5,6 +5,15 @@ export type AmplifyDependentResourcesAttributes = {
             "Arn": "string",
             "Region": "string",
             "LambdaExecutionRole": "string"
+<<<<<<< Updated upstream
+=======
+        },
+        "AdAgenzyCRUD": {
+            "Name": "string",
+            "Arn": "string",
+            "Region": "string",
+            "LambdaExecutionRole": "string"
+>>>>>>> Stashed changes
         }
     },
     "auth": {
@@ -23,6 +32,14 @@ export type AmplifyDependentResourcesAttributes = {
             "RootUrl": "string",
             "ApiName": "string",
             "ApiId": "string"
+<<<<<<< Updated upstream
+=======
+        },
+        "AdAgenzyCRUD": {
+            "RootUrl": "string",
+            "ApiName": "string",
+            "ApiId": "string"
+>>>>>>> Stashed changes
         }
     },
     "storage": {

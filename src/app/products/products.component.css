@@ -9,6 +9,7 @@
 
 .tablebtn{
     background-color: #C7DEF5 !important;
+    font-size: 90%;
 }
 
 .tablebtn:hover{
@@ -22,6 +23,7 @@
 .tablebtnSecondary{
     background-color: #4A82BC !important;
     color: white;
+    font-size: 90%;
 }
 
 .tablebtnSecondary:hover {
@@ -32,6 +34,7 @@
 td, tr{
     text-align: center;
     border-bottom: solid 2px #C7DEF5;
+    /* font-size: 90%; */
 }
 
 p {
@@ -45,6 +48,7 @@ p {
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 1px;
+  font-size: 90%;
 }
 
 .tableStyle {

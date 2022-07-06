@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {  IProducts } from '../Interfaces/products';
+// import { API } from 'aws-amplify';
 
 @Component({
   selector: 'app-products',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
+  listproducts?: IProducts[];
+
   constructor() { }
 
   ngOnInit(): void {
-  }
 
+    //@ts-ignore
+    API.get('AdAgenzyCRUD', '/items/listproducts').then((value) =>{
+      console.log(value);
+      this.listproducts = value.items;
+    })
+  }
 }
