@@ -47,8 +47,9 @@ p {
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
-  padding-bottom: 1px;
-  font-size: 90%;
+  font-size: 80%;
+  height: 65vh;
+  overflow: auto;
 }
 
 .tableStyle {
@@ -103,4 +104,13 @@ thead {
   background-color: #124274 !important;
   color: white;
   width: 35% !important;
+}
+
+.zoom {
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.4); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }

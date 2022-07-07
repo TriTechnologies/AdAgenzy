@@ -5,13 +5,7 @@
       "name": "/items",
       "lambdaFunction": "AdAgenzyCRUD",
       "permissions": {
-        "setting": "private",
-        "auth": [
-          "create",
-          "read",
-          "update",
-          "delete"
-        ]
+        "setting": "open"
       }
     }
   }

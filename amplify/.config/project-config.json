@@ -1,10 +1,7 @@
 {
-<<<<<<< Updated upstream
-=======
   "providers": [
     "awscloudformation"
   ],
->>>>>>> Stashed changes
   "projectName": "AdAgenzy",
   "version": "3.1",
   "frontend": "javascript",
@@ -13,18 +10,8 @@
     "config": {
       "SourceDir": "src",
       "DistributionDir": "dist",
-<<<<<<< Updated upstream
-      "BuildCommand": "npm run-script build",
-      "StartCommand": "ng serve"
-    }
-  },
-  "providers": [
-    "awscloudformation"
-  ]
-=======
       "BuildCommand": "npm.cmd run-script build",
       "StartCommand": "ng serve"
     }
   }
->>>>>>> Stashed changes
 }

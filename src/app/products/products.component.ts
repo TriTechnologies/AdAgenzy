@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {  IProducts } from '../Interfaces/products';
-// import { API } from 'aws-amplify';
+import {  IProducts, IProductsData } from '../Interfaces/products';
+
+import { API } from 'aws-amplify';
 
 @Component({
   selector: 'app-products',
@@ -9,7 +10,7 @@ import {  IProducts } from '../Interfaces/products';
 })
 export class ProductsComponent implements OnInit {
 
-  listproducts?: IProducts[];
+  listproducts?: IProductsData[];
 
   constructor() { }
 
@@ -18,7 +19,7 @@ export class ProductsComponent implements OnInit {
     //@ts-ignore
     API.get('AdAgenzyCRUD', '/items/listproducts').then((value) =>{
       console.log(value);
-      this.listproducts = value.items;
+      this.listproducts = value.Items[0].ProductData;
     })
   }
 }

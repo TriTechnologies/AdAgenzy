@@ -5,8 +5,6 @@ import awsgi
 import boto3
 import json
 from uuid import uuid4
-from boto3.dynamodb.conditions import BeginsWith, Key
-import urllib.parse
 
 dynamodb = boto3.resource("dynamodb")
 table = dynamodb.Table('adagenzytable-dev')
@@ -30,5 +28,7 @@ def list_products():
             '#SK': 'SK'
         }
     )
-
     return jsonify(item)
+
+def handler(event, context):
+    return awsgi.response(app, event, context)
