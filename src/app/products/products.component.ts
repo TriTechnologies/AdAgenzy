@@ -9,9 +9,8 @@ import { API } from 'aws-amplify';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-
+  
   listproducts?: IProductsData[];
-
   constructor() { }
 
   ngOnInit(): void {
@@ -21,5 +20,9 @@ export class ProductsComponent implements OnInit {
       console.log(value);
       this.listproducts = value.Items[0].ProductData;
     })
+  }
+
+  ProductDetails(data:any) {
+    localStorage.setItem('ProductDetails', JSON.stringify(data))
   }
 }

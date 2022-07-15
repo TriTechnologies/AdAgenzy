@@ -1,10 +1,7 @@
-from decimal import Decimal
 from flask_cors import CORS
 from flask import Flask, jsonify, request
 import awsgi
 import boto3
-import json
-from uuid import uuid4
 
 dynamodb = boto3.resource("dynamodb")
 table = dynamodb.Table('adagenzytable-dev')
@@ -29,6 +26,6 @@ def list_products():
         }
     )
     return jsonify(item)
-
+    
 def handler(event, context):
     return awsgi.response(app, event, context)

@@ -1,16 +1,16 @@
 {
   "function": {
-    "SaaSProComp": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    },
     "AdAgenzyCRUD": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     },
-    "AdAgenzyComp": {
+    "AdAgenzyProducts": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "AdAgenzyCompetitors": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
@@ -43,20 +43,6 @@
     }
   },
   "api": {
-    "SaaSProComp": {
-      "service": "API Gateway",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [
-        {
-          "category": "function",
-          "resourceName": "SaaSProComp",
-          "attributes": [
-            "Name",
-            "Arn"
-          ]
-        }
-      ]
-    },
     "AdAgenzyCRUD": {
       "service": "API Gateway",
       "providerPlugin": "awscloudformation",
@@ -71,13 +57,27 @@
         }
       ]
     },
-    "AdAgenzyComp": {
+    "AdAgenzyProducts": {
       "service": "API Gateway",
       "providerPlugin": "awscloudformation",
       "dependsOn": [
         {
           "category": "function",
-          "resourceName": "AdAgenzyComp",
+          "resourceName": "AdAgenzyProducts",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
+    },
+    "AdAgenzyCompetitors": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "AdAgenzyCompetitors",
           "attributes": [
             "Name",
             "Arn"

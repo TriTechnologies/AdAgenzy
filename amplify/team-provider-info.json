@@ -23,11 +23,19 @@
         },
         "AdAgenzyCRUD": {
           "deploymentBucketName": "amplify-adagenzy-dev-164837-deployment",
-          "s3Key": "amplify-builds/AdAgenzyCRUD-6d456b50702b59513667-build.zip"
+          "s3Key": "amplify-builds/AdAgenzyCRUD-72675839654344446871-build.zip"
         },
         "AdAgenzyComp": {
           "deploymentBucketName": "amplify-adagenzy-dev-164837-deployment",
           "s3Key": "amplify-builds/AdAgenzyComp-304344752f2f6275376e-build.zip"
+        },
+        "AdAgenzyProducts": {
+          "deploymentBucketName": "amplify-adagenzy-dev-164837-deployment",
+          "s3Key": "amplify-builds/AdAgenzyProducts-4569356a355939567361-build.zip"
+        },
+        "AdAgenzyCompetitors": {
+          "deploymentBucketName": "amplify-adagenzy-dev-164837-deployment",
+          "s3Key": "amplify-builds/AdAgenzyCompetitors-49634c2b616630506742-build.zip"
         }
       }
     }

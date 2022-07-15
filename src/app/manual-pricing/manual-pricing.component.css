@@ -60,6 +60,8 @@ p {
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 1px;
+  height: 76vh;
+  overflow: auto;
 }
 
 .tableStyle {
@@ -140,4 +142,13 @@ thead {
   border-radius: 30px;
   background-color: #D7E8FB;
   border: 1px solid #184777;
+}
+
+.zoom {
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.4);
 }

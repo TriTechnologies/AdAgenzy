@@ -2,6 +2,7 @@ from woocommerce import API
 import time
 import boto3
 import uuid
+from flask import Flask, jsonify, request
 
 def handler(event, context):
     dynamodb = boto3.resource("dynamodb")
@@ -51,3 +52,4 @@ def handler(event, context):
             "ProductData": total_prod
         }
     )
+    return jsonify(resp)

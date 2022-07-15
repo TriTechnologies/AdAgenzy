@@ -27,56 +27,56 @@
           <div class="row">
             <div class="col-lg-12">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault" style="font-size: medium; font-weight: lighter;">
                   ID/SKU
                 </label>
               </div>
 
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault" style="font-size: medium; font-weight: lighter;">
                   Cost Price
                 </label>
               </div>
 
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault" style="font-size: medium; font-weight: lighter;">
                   My Price
                 </label>
               </div>
 
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault" style="font-size: medium; font-weight: lighter;">
                   Shipping Cost
                 </label>
               </div>
 
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault" style="font-size: medium; font-weight: lighter;">
                   Stock
                 </label>
               </div>
 
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault" style="font-size: medium; font-weight: lighter;">
                   Gross Profit
                 </label>
               </div>
 
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault" style="font-size: medium; font-weight: lighter;">
                   Gross Profit Ratio
                 </label>
               </div>
 
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault" style="font-size: medium; font-weight: lighter;">
                   Position
                 </label>
@@ -206,12 +206,13 @@
             <div class="float-start me-3 zoom shadow-lg">
               <!-- Product Image -->
               <a href="{{products.Product_Link}}" target="_blank">
-                <img src="{{products.Product_Image}}" class="float-start" width="40" height="40">
+                <img src="{{products.Product_Image}}" class="float-start" width="35" height="35">
               </a>
             </div>
             <p class="float-start">{{products.PRODUCT_NAME}}</p>
           </td>
-          <td>{{products.Product_SKU}}</td>
+          <td *ngIf=" products.Product_SKU === '' ">NULL</td>
+          <td *ngIf=" products.Product_SKU != '' ">{{products.Product_SKU}}</td>
           <td>-</td>
           <td>${{products.Product_Price}}</td>
           <td>-</td>
@@ -220,12 +221,12 @@
           <td>-</td>
           <td>Undefined</td>
           <td>
-            <button class="btn btn-primary btn-sm tablebtn" style="border-radius: 20px;">
+            <button class="btn btn-primary btn-sm tablebtn mt-1" style="border-radius: 20px;">
               Enable Monitoring
             </button>
           </td>
           <td>
-            <button class="btn btn-sm btntable float-end" routerLink="/home/productdetails">
+            <button class="btn btn-sm btntable float-end" routerLink="/home/productdetails" (click)="ProductDetails(products)">
               <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M11 0C4.928 0 0 4.928 0 11C0 17.072 4.928 22 11 22C17.072 22 22 17.072 22 11C22 4.928 17.072 0 11 0ZM12.1 16.5H9.9V9.9H12.1V16.5ZM12.1 7.7H9.9V5.5H12.1V7.7Z"

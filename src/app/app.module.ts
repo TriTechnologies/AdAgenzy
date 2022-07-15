@@ -23,6 +23,7 @@ import { WooCommerceComponent } from './woo-commerce/woo-commerce.component';
 import { MyAccountComponent } from './my-account/my-account.component';
 
 import { LoginPageComponent } from './login-page/login-page.component';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -44,6 +45,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule, 
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

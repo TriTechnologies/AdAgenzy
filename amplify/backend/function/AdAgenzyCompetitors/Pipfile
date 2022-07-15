@@ -7,11 +7,11 @@ verify_ssl = true
 
 [packages]
 src = {editable = true, path = "./src"}
-woocommerce = "*"
-requests-html = "*"
-bs4 = "*"
-requests = "*"
 boto3 = "*"
+requests = "*"
+bs4 = "*"
+requests-html = "*"
+lxml = "*"
 
 [requires]
 python_version = "3.8"

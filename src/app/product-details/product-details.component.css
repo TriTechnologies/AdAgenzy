@@ -61,7 +61,7 @@ p {
 .tableStyle {
   background-color: #EDF5FF;
   border-radius: 10px;
-  font-size: 90%;
+  font-size: 80%;
 }
 
 table th:first-child {
@@ -78,4 +78,30 @@ table th {
 
 thead {
   background-color: #C7DEF5;
+}
+
+.zoom {
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.2);
+}
+
+.zoom2 {
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.zoom2:hover {
+  transform: scale(1.1);
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.HeadingStyle{
+  color: #184777;
 }
