@@ -176,8 +176,9 @@
       <thead>
         <tr>
           <th scope="col">
-            <div>
-              <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+            <div class="rowauto" data-toggle="buttons">
+              <input type="checkbox" id="selectall" name="selectall" autocomplete="off" onclick="eventCheckBox()">
+              <span class="glyphicon glyphicon-ok"></span>
             </div>
           </th>
           <th scope="col">Product Name</th>
@@ -198,8 +199,9 @@
 
         <tr *ngFor="let products of listproducts">
           <th scope="row">
-            <div>
-              <input class="form-check-input mt-2" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+            <div data-toggle="buttons">
+              <input type="checkbox" id="check_1" name="check_1" autocomplete="off" >
+              <span class="glyphicon glyphicon-ok"></span>
             </div>
           </th>
           <td>
@@ -314,6 +316,7 @@
 
       </tbody>
     </table>
+    
   </div>
 
 </div>

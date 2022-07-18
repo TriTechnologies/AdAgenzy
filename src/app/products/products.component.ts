@@ -25,4 +25,12 @@ export class ProductsComponent implements OnInit {
   ProductDetails(data:any) {
     localStorage.setItem('ProductDetails', JSON.stringify(data))
   }
+
+  eventCheckBox() {
+    let checkboxs = document.getElementsByTagName("input");
+    for(let i = 1; i < checkboxs.length ; i++) {
+      checkboxs[i].checked = !checkboxs[i].checked;
+    }
+  }
+
 }

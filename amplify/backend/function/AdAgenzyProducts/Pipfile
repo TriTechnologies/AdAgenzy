@@ -10,7 +10,6 @@ src = {editable = true, path = "./src"}
 woocommerce = "*"
 boto3 = "*"
 flask = "*"
-uuid = "*"
 
 [requires]
 python_version = "3.8"

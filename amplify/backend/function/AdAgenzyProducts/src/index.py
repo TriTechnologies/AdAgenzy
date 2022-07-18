@@ -1,7 +1,7 @@
 from woocommerce import API
-import time
+# import time
 import boto3
-import uuid
+# import uuid
 from flask import Flask, jsonify, request
 
 def handler(event, context):
@@ -15,41 +15,48 @@ def handler(event, context):
         consumer_secret="cs_080b1d9fcc10d021b29a77a3bd06f2615f31ed94",
         version="wc/v3"
     )
-    time.sleep(2)
-
-    r = wcapi.get("products", params={"per_page": 40}).json()
-
-    for s in r:
-        prod_id = s['id']
-        prod_sku = s['sku']
-        prod_name = s['name']
-        prod_link = s['permalink']
-        prod_barcode = s['barcode']
-        prod_price = s['price']
-        prod_stock = s['stock_status']
-        image = s['images']
-        for i in image:
-            prod_image = i['src']
+    page = 1
+    while True:
+        print(page)
+        r = wcapi.get("products", params={'per_page': 40, 'page': page}).json()
+        if len(r) == 0:
+            print("Length is Zero")
             break
-        prod_json = {
-            'Product_ID' : prod_id,
-            'Product_SKU' : prod_sku,
-            'PRODUCT_NAME' : prod_name,
-            'Product_Link' : prod_link,
-            'Product_Image' : prod_image,
-            'Product_Price' : prod_price,
-            'Product_Stock' : prod_stock,
-            'Product_Barcode' : prod_barcode
+        else:
+            for s in r:
+                prod_id = s['id']
+                prod_sku = s['sku']
+                prod_name = s['name']
+                prod_link = s['permalink']
+                prod_barcode = s['barcode']
+                prod_price = s['price']
+                prod_stock = s['stock_status']
+                image = s['images']
+                for i in image:
+                    prod_image = i['src']
+                    break
+                prod_json = {
+                    'Product_ID' : prod_id,
+                    'Product_SKU' : prod_sku,
+                    'PRODUCT_NAME' : prod_name,
+                    'Product_Link' : prod_link,
+                    'Product_Image' : prod_image,
+                    'Product_Price' : prod_price,
+                    'Product_Stock' : prod_stock,
+                    'Product_Barcode' : prod_barcode
 
-        }
-        total_prod.append(prod_json)
-    print(total_prod)
+                }
+                total_prod.append(prod_json)
+            page = page + 1  
+            print(len(total_prod))
+            print(total_prod)
 
-    resp = table.put_item(
-        Item={
-            "PK": str(uuid.uuid4()),
-            "SK": "products",
-            "ProductData": total_prod
-        }
-    )
-    return jsonify(resp)
+#============= STORE IN DB ==================
+    # resp = table.put_item(
+    #     Item={
+    #         "PK": str(uuid.uuid4()),
+    #         "SK": "products",
+    #         "ProductData": total_prod
+    #     }
+    # )
+    # return jsonify(resp)
