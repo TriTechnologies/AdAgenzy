@@ -2,7 +2,7 @@ export interface IProducts {
     Pk: string
     Sk: string
 
-    ProductsData: IProductsData;
+    ProductData: IProductsData;
 }
 
 export interface IProductsData {

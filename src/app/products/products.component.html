@@ -177,8 +177,7 @@
         <tr>
           <th scope="col">
             <div class="rowauto" data-toggle="buttons">
-              <input type="checkbox" id="selectall" name="selectall" autocomplete="off" onclick="eventCheckBox()">
-              <span class="glyphicon glyphicon-ok"></span>
+              <input type="checkbox" id="checkboxAll" name="selectall" autocomplete="off">
             </div>
           </th>
           <th scope="col">Product Name</th>
@@ -197,28 +196,27 @@
       </thead>
       <tbody>
 
-        <tr *ngFor="let products of listproducts">
+        <tr *ngFor="let products of listproducts ">
           <th scope="row">
             <div data-toggle="buttons">
-              <input type="checkbox" id="check_1" name="check_1" autocomplete="off" >
-              <span class="glyphicon glyphicon-ok"></span>
+              <input type="checkbox" id="checkbox1" class="chkboxname" name="check_1">
             </div>
           </th>
           <td>
             <div class="float-start me-3 zoom shadow-lg">
               <!-- Product Image -->
-              <a href="{{products.Product_Link}}" target="_blank">
-                <img src="{{products.Product_Image}}" class="float-start" width="35" height="35">
+              <a href="{{products.ProductData.Product_Link}}" target="_blank">
+                <img src="{{products.ProductData.Product_Image}}" class="float-start" width="35" height="35">
               </a>
             </div>
-            <p class="float-start">{{products.PRODUCT_NAME}}</p>
+            <p class="float-start">{{products.ProductData.PRODUCT_NAME}}</p>
           </td>
-          <td *ngIf=" products.Product_SKU === '' ">NULL</td>
-          <td *ngIf=" products.Product_SKU != '' ">{{products.Product_SKU}}</td>
+          <td *ngIf=" products.ProductData.Product_SKU === '' ">NULL</td>
+          <td *ngIf=" products.ProductData.Product_SKU != '' ">{{products.ProductData.Product_SKU}}</td>
           <td>-</td>
-          <td>${{products.Product_Price}}</td>
+          <td>${{products.ProductData.Product_Price}}</td>
           <td>-</td>
-          <td>{{products.Product_Stock}}</td>
+          <td>{{products.ProductData.Product_Stock}}</td>
           <td>-</td>
           <td>-</td>
           <td>Undefined</td>
@@ -253,7 +251,7 @@
         <tr>
           <th scope="row">
             <div>
-              <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+              <input class="form-check-input" type="checkbox" id="checkbox1" value="" aria-label="...">
             </div>
           </th>
           <td>
@@ -315,8 +313,7 @@
         </tr>
 
       </tbody>
-    </table>
-    
+    </table>    
   </div>
 
 </div>

@@ -25,6 +25,8 @@ import { MyAccountComponent } from './my-account/my-account.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
+import { NgxPaginationModule } from 'ngx-pagination';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +48,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule, 
+    NgxPaginationModule,
     FormsModule
   ],
   providers: [],
