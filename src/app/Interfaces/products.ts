@@ -14,4 +14,7 @@ export interface IProductsData {
 
     Product_SKU: string;
     Product_Link: string;
+
+    Categories: string;
+    Brands: string;
 }

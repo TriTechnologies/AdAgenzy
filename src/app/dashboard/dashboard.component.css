@@ -1,5 +1,5 @@
 .rounded-lg {
-    border-radius: 1rem;
+    border-radius: 1rem !important;
   }
   
   .progress {

@@ -6,7 +6,7 @@ a {
 
 a:hover {
   background: #F6FAFF;
-  color: #184777;
+  color: #184777 !important;
   border-radius: 20px 0 0 20px;
   /*box-shadow: 35px 35px 0 10px white;*/
 }

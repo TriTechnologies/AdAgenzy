@@ -11,8 +11,8 @@ import { FormControl } from '@angular/forms';
 })
 export class ManualPricingComponent implements OnInit {
 
-  listproducts?: IProductsData[];
-  ProductData! : IProductsData;
+  listproducts?: IProducts[];
+  products! : IProducts;
 
   newPrice = new FormControl;
 
@@ -24,7 +24,7 @@ export class ManualPricingComponent implements OnInit {
     //@ts-ignore
     API.get('AdAgenzyCRUD', '/items/listproducts').then((value) =>{
       console.log(value);
-      this.listproducts = value.Items[0].ProductData;
+      this.listproducts = value.Items as IProducts[];
     })
   }
 
@@ -35,7 +35,7 @@ export class ManualPricingComponent implements OnInit {
 
   ProductDetails(data:any) {
     console.log(data)
-    this.ProductData = data
+    this.products = data
     // localStorage.setItem('ProductDetails', JSON.stringify(data))
 
     // this.ProductData = JSON.parse(localStorage.getItem('ProductDetails')!)

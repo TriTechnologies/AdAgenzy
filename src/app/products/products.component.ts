@@ -11,6 +11,7 @@ import { API } from 'aws-amplify';
 export class ProductsComponent implements OnInit {
   
   listproducts?: IProducts[];
+  
   constructor() { }
 
   ngOnInit(): void {
