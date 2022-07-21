@@ -49,6 +49,7 @@ p {
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
+  padding-bottom: 1px;
   font-size: 80%;
   height: 65vh;
   overflow: auto;

@@ -61,6 +61,7 @@ p {
   padding-right: 10px;
   padding-bottom: 1px;
   height: 76vh;
+  font-size: 80%;
   overflow: auto;
 }
 
@@ -91,13 +92,12 @@ thead {
 }
 
 .modal-content {
-  width: 120%;
+  width: 125%;
   margin-top: 25%;
 }
 
 .divText {
   color: #184777;
-  font-size: 70% !important;
 }
 
 .form-control {
@@ -152,4 +152,17 @@ thead {
 
 .zoom:hover {
   transform: scale(1.4);
+}
+
+.headerfont{
+  font-size: 98% !important;
+  max-width: 60% !important;
+}
+
+.DivProductModal{
+  max-width: 70% !important;
+}
+
+.btnclassfont{
+  font-size: 98% !important;
 }
