@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {  IProducts, IProductsData } from '../Interfaces/products';
 
+
 import { API } from 'aws-amplify';
+import { __values } from 'tslib';
+import { TitleStrategy } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -11,20 +14,27 @@ import { API } from 'aws-amplify';
 export class ProductsComponent implements OnInit {
   
   listproducts?: IProducts[];
+  products! : IProducts;
+
   
-  constructor() { }
+  constructor() { 
+  
+  }
 
   ngOnInit(): void {
 
+ 
     //@ts-ignore
     API.get('AdAgenzyCRUD', '/items/listproducts').then((value) =>{
       this.listproducts = value.Items as IProducts[];
+      localStorage.setItem("listproducts" , JSON.stringify(value))
       console.log(this.listproducts);
-    })
+    });
+    
   }
 
   ProductDetails(data:any) {
-    localStorage.setItem('ProductDetails', JSON.stringify(data))
+    this.products = data
   }
   
 }
