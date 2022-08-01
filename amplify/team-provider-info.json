@@ -9,7 +9,8 @@
       "UnauthRoleName": "amplify-adagenzy-dev-164837-unauthRole",
       "StackName": "amplify-adagenzy-dev-164837",
       "StackId": "arn:aws:cloudformation:us-east-1:268692765615:stack/amplify-adagenzy-dev-164837/705f4590-f7a1-11ec-87b0-128e32284ae1",
-      "AmplifyAppId": "d32cw3wxeopnkc"
+      "AmplifyAppId": "d32cw3wxeopnkc",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-adagenzy-dev-164837-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
       "auth": {
@@ -18,15 +19,15 @@
       "function": {
         "AdAgenzyCRUD": {
           "deploymentBucketName": "amplify-adagenzy-dev-164837-deployment",
-          "s3Key": "amplify-builds/AdAgenzyCRUD-72675839654344446871-build.zip"
+          "s3Key": "amplify-builds/AdAgenzyCRUD-306b3137795655733568-build.zip"
         },
         "AdAgenzyProducts": {
           "deploymentBucketName": "amplify-adagenzy-dev-164837-deployment",
-          "s3Key": "amplify-builds/AdAgenzyProducts-77552b4d4f3449554770-build.zip"
+          "s3Key": "amplify-builds/AdAgenzyProducts-364d4471546436564967-build.zip"
         },
         "AdAgenzyCompetitors": {
           "deploymentBucketName": "amplify-adagenzy-dev-164837-deployment",
-          "s3Key": "amplify-builds/AdAgenzyCompetitors-49634c2b616630506742-build.zip"
+          "s3Key": "amplify-builds/AdAgenzyCompetitors-2b2f586f686f4770566c-build.zip"
         }
       }
     }

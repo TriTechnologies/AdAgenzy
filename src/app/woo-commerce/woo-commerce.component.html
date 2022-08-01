@@ -8,20 +8,20 @@
   <!-- Form in Div -->
   <div class="TableDiv ms-5 me-5 mt-3 shadow-lg">
 
-    <form class="ms-5 me-5 mt-3 mb-4">
+    <form class="ms-5 me-5 mt-3 mb-4" action="" [formGroup]="form" (ngSubmit)="create()">
       <div class="mb-3">
         <label for="URL" class="form-label">URL</label>
-        <input type="url" class="form-control" id="url" aria-describedby="url">
+        <input type="url" formControlName="url" class="form-control" id="url" aria-describedby="url">
       </div>
 
       <div class="mb-3">
         <label for="consumerkey" class="form-label">Consumer Key</label>
-        <input type="text" class="form-control" id="consumerkey">
+        <input type="text" class="form-control" formControlName="consumerkey" id="consumerkey">
       </div>
 
       <div class="mb-4">
         <label for="consumersecret" class="form-label">Consumer Secret</label>
-        <input type="text" class="form-control" id="consumersecret">
+        <input type="text" class="form-control" formControlName="consumersecret" id="consumersecret">
       </div>
 
       <button class="btn btn-danger DangerBtn me-3" routerLink="/home/integrations">Cancel</button>

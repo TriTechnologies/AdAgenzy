@@ -24,16 +24,13 @@
     <table class="table tableStyle table-borderless table-sm">
       <thead>
         <tr>
-          <th scope="col"></th>
-          <th scope="col" class="firstCol col-lg-6 th-sm">Competitors</th>
-          <th scope="col">Total</th>
-          <th scope="col">Cheapest</th>
-          <th scope="col">Highest</th>
+          <th scope="col">Competitors</th>
+          <th scope="col">Store Links</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">
+        <tr *ngFor="let products of CompetitorData, let i = index">
+           <!-- <th scope="row" > 
             <div class="mb-1">
               <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -41,13 +38,11 @@
                   fill="#184777" />
               </svg>
             </div>
-          </th>
-          <td class="firstCol">3-Nordik.dk</td>
-          <td>20</td>
-          <td>0</td>
-          <td>4</td>
+          </th>  -->
+          <td>{{products.Comp_Store}}</td>
+          <td>{{products.Comp_Store_Link}}</td>
         </tr>
-        <tr>
+        <!-- <tr>
           <th scope="row">
             <div class="mb-1">
               <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -91,7 +86,7 @@
           <td>1</td>
           <td>0</td>
           <td>0</td>
-        </tr>
+        </tr> -->
       </tbody>
     </table>
   </div>

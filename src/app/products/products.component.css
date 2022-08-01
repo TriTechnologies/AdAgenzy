@@ -13,6 +13,15 @@
     background-color: #C7DEF5 !important;
     font-size: 90%;
 }
+.divText {
+  color: #184777;
+  margin-right: 35%;
+}
+
+.modelbtn {
+  background-color: #E9F2FC;
+  margin-top: -86px;
+}
 
 .tablebtn:hover{
     background-color: #184777 !important;
@@ -117,3 +126,4 @@ thead {
 .zoom:hover {
   transform: scale(1.4);
 }
+

@@ -3,9 +3,13 @@ export interface IProducts {
     Sk: string
 
     ProductData: IProductsData;
+    CompetitorData: ICompetitorData;
+
 }
 
 export interface IProductsData {
+
+
     Product_Image: string;
     PRODUCT_NAME: string;
 
@@ -17,4 +21,17 @@ export interface IProductsData {
 
     Categories: string;
     Brands: string;
+
+   
+
+
 }
+export interface ICompetitorData {
+
+    Comp_Store: string;
+    Comp_Store_Link: string;
+
+    Comp_prod_delivery_price: string;
+    Comp_Prod_Price: string;
+}
+

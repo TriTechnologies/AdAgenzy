@@ -8,10 +8,8 @@ verify_ssl = true
 [packages]
 src = {editable = true, path = "./src"}
 boto3 = "*"
-requests = "*"
 bs4 = "*"
-requests-html = "*"
-lxml = "*"
+flask = "*"
 
 [requires]
 python_version = "3.8"

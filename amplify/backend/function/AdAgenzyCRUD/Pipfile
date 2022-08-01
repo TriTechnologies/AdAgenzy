@@ -7,10 +7,10 @@ verify_ssl = true
 
 [packages]
 src = {editable = true, path = "./src"}
+boto3 = "*"
+uuid = "*"
 flask-cors = "*"
 flask = "*"
-awsgi = "*"
-boto3 = "*"
 aws-wsgi = "*"
 
 [requires]

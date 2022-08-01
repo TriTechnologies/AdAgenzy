@@ -1,3 +1,4 @@
+from uuid import uuid4
 from flask_cors import CORS
 from flask import Flask, jsonify, request
 import awsgi
@@ -29,3 +30,14 @@ def list_products():
     
 def handler(event, context):
     return awsgi.response(app, event, context)
+
+@app.route(BASE_ROUTE + '/attachstore', methods=['POST'])
+def attach_store():
+    request_json = request.get_json()
+    table.put_item( 
+        Item={
+        'PK': str(uuid4()),
+        'SK': 'store',
+        'StoreData': request_json['StoreData'],
+    })
+    return jsonify(message="store created")    

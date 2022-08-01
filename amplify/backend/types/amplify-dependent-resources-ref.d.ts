@@ -1,11 +1,5 @@
 export type AmplifyDependentResourcesAttributes = {
     "function": {
-        "AdAgenzyCRUD": {
-            "Name": "string",
-            "Arn": "string",
-            "Region": "string",
-            "LambdaExecutionRole": "string"
-        },
         "AdAgenzyProducts": {
             "Name": "string",
             "Arn": "string",
@@ -13,6 +7,12 @@ export type AmplifyDependentResourcesAttributes = {
             "LambdaExecutionRole": "string"
         },
         "AdAgenzyCompetitors": {
+            "Name": "string",
+            "Arn": "string",
+            "Region": "string",
+            "LambdaExecutionRole": "string"
+        },
+        "AdAgenzyCRUD": {
             "Name": "string",
             "Arn": "string",
             "Region": "string",
@@ -31,17 +31,17 @@ export type AmplifyDependentResourcesAttributes = {
         }
     },
     "api": {
-        "AdAgenzyCRUD": {
-            "RootUrl": "string",
-            "ApiName": "string",
-            "ApiId": "string"
-        },
         "AdAgenzyProducts": {
             "RootUrl": "string",
             "ApiName": "string",
             "ApiId": "string"
         },
         "AdAgenzyCompetitors": {
+            "RootUrl": "string",
+            "ApiName": "string",
+            "ApiId": "string"
+        },
+        "AdAgenzyCRUD": {
             "RootUrl": "string",
             "ApiName": "string",
             "ApiId": "string"

@@ -7,14 +7,14 @@
 <div class="row ms-5 me-5 mt-5 shadow-lg TableDiv">
   <div class="TableDiv mb-3" >
 
-    <img src="{{ProductData?.Product_Image}}" class="float-start zoom2" width="288" height="177">
+    <img src="{{products?.ProductData?.Product_Image}}" class="float-start zoom2" width="288" height="177">
 
     <div class="float-start ms-5 mt-3">
-      <h3 class="HeadingStyle">{{ProductData?.PRODUCT_NAME}}</h3>
-      <p>Category: <b>Electronics</b></p>
-      <p>Brand: <b>Samsung</b></p>
+      <h3 class="HeadingStyle">{{products?.ProductData?.PRODUCT_NAME}}</h3>
+      <p>Category: <b>{{products?.ProductData?.Categories}}</b></p>
+      <p>Brand: <b>{{products?.ProductData?.Brands}}</b></p>
       <p>Product Page:
-        <a href="{{ProductData?.Product_Link}}" target="_blank">
+        <a href="{{products?.ProductData?.Product_Link}}" target="_blank">
         <button class="btn btn-primary btn-md ms-2" style="border-radius: 20px;">
           Open Link
         </button>
@@ -75,7 +75,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let products of listproducts">
+      <tr>
         <td scope="row">
           <div class="float-start me-2 ms-2 zoom shadow-lg">
             <!-- Product Image -->
@@ -84,7 +84,7 @@
             </a>
           </div>
         </td>
-        <td>{{products.ProductData.PRODUCT_NAME}}</td>
+        <td>{{products?.ProductData?.PRODUCT_NAME}}</td>
         <td *ngIf=" products?.ProductData?.Product_SKU === '' ">NULL</td>
         <td *ngIf=" products?.ProductData?.Product_SKU != '' ">{{products?.ProductData?.Product_SKU}}</td>
         <td>-</td>
