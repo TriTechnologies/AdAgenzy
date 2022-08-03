@@ -7,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    // document.getElementById('header')!.style.display = "none";
+    // document.getElementById('footer')!.style.display = "none";
+    // document.getElementById('amplify-authenticator')!.style.display = "none";
+
+    // console.log((document.getElementsByTagName('amplify-authenticator')[0] as HTMLElement).style.backgroundImage = 'none')
+    // console.log((document.getElementsByTagName('amplify-authenticator')[0] as HTMLElement).style.display = 'inline')
+  }
 
   ngOnInit(): void {
   }

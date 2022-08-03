@@ -14,20 +14,21 @@
     },
     "categories": {
       "auth": {
-        "adagenzy": {}
+        "adagenzy": {},
+        "adagenzyf5062377": {}
       },
       "function": {
         "AdAgenzyCRUD": {
           "deploymentBucketName": "amplify-adagenzy-dev-164837-deployment",
-          "s3Key": "amplify-builds/AdAgenzyCRUD-306b3137795655733568-build.zip"
+          "s3Key": "amplify-builds/AdAgenzyCRUD-456a6635745541786a53-build.zip"
         },
         "AdAgenzyProducts": {
           "deploymentBucketName": "amplify-adagenzy-dev-164837-deployment",
-          "s3Key": "amplify-builds/AdAgenzyProducts-364d4471546436564967-build.zip"
+          "s3Key": "amplify-builds/AdAgenzyProducts-46474d63354232713362-build.zip"
         },
         "AdAgenzyCompetitors": {
           "deploymentBucketName": "amplify-adagenzy-dev-164837-deployment",
-          "s3Key": "amplify-builds/AdAgenzyCompetitors-2b2f586f686f4770566c-build.zip"
+          "s3Key": "amplify-builds/AdAgenzyCompetitors-5968704e733637426775-build.zip"
         }
       }
     }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {  IProducts, IProductsData } from '../Interfaces/products';
+import {  IProducts, IProductsData, ICompetitorData } from '../Interfaces/products';
 
 import { API } from 'aws-amplify';
 import { FormControl } from '@angular/forms';
@@ -13,6 +13,7 @@ export class ManualPricingComponent implements OnInit {
 
   listproducts?: IProducts[];
   products! : IProducts;
+  CompetitorData!: ICompetitorData[];
 
   newPrice = new FormControl;
 
@@ -22,9 +23,9 @@ export class ManualPricingComponent implements OnInit {
   ngOnInit(): void {
 
     //@ts-ignore
-    API.get('AdAgenzyCRUD', '/items/listproducts').then((value) =>{
+    API.get('AdAgenzyCRUD', '/items/repricing').then((value) =>{
       console.log(value);
-      this.listproducts = value.Items as IProducts[];
+      this.listproducts = value as IProducts[];
     })
   }
 
@@ -40,4 +41,17 @@ export class ManualPricingComponent implements OnInit {
 
     // this.ProductData = JSON.parse(localStorage.getItem('ProductDetails')!)
   }
+
+  CompDetail(data:any){
+    this.products = data;
+    console.log(data)
+  
+    this.CompetitorData = data.CompetitorData
+  
+     //@ts-ignore
+    //  API.get('AdAgenzyCRUD', '/items/listproducts').then((value) =>{
+    //   this.CompetitorData = value.Items[2].CompetitorData  as ICompetitorData[];
+    //   });
+  
+    }
 }

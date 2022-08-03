@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AdAgenzy';
+
+  constructor( ) {
+  }
+  ngOnInit() {
+  
+  }
+  ngOnDestroy() {
+    localStorage.clear()
+  }
+
+  
 }

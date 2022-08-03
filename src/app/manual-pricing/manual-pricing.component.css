@@ -91,13 +91,14 @@ thead {
   background-color: #E9F2FC;
 }
 
-.modal-content {
+/* .modal-content {
   width: 125%;
   margin-top: 25%;
-}
+} */
 
 .divText {
   color: #184777;
+  margin-right: 35%;
 }
 
 .form-control {
