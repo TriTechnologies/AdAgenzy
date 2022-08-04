@@ -262,7 +262,7 @@
                   <tbody>
                     <tr *ngFor="let products of CompetitorData">
                       <td>{{products.Comp_Store}}</td>
-                      <td>{{products.Comp_Store_Link}}</td>
+                      <td><a class="btn btn-primary" target="_blank" href="{{products.Comp_Store_Link}}">Open Link</a></td>
                       <td>{{products.Comp_Prod_Price}}</td>
                       <td>{{products.Comp_prod_delivery_price}}</td>
                     </tr>

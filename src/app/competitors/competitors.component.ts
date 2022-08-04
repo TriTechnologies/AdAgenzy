@@ -23,8 +23,8 @@ export class CompetitorsComponent implements OnInit {
   ngOnInit(): void {
 
      //@ts-ignore
-     API.get('AdAgenzyCRUD', '/items/listproducts').then((value) =>{
-    this.CompetitorData = value.Items[2].CompetitorData as ICompetitorData[];
+     API.get('AdAgenzyCRUD', '/items/listcompetitors').then((value) =>{
+    this.CompetitorData = value as ICompetitorData[];
     });
 
   }
