@@ -42,6 +42,8 @@ export class WooCommerceComponent implements OnInit {
 
 
   create() {
+    const UsersData: any[] = []
+    UsersData.push(JSON.parse(localStorage.getItem('UserID')!))
     const attachstores = this.form.getRawValue();
     const attachStore = async () => {
       //@ts-ignore
@@ -49,15 +51,28 @@ export class WooCommerceComponent implements OnInit {
 
         body: {
          
-            ...this.form.getRawValue(),
             PK: uuidv4(),
             StoreData: attachstores,
-          
-          IS_TOUCHED: 'False'
+            UsersData: UsersData, 
         },
 
       }).then(response => {
         console.log(response)
+        if (response.message == 'Store Attached') {
+          API.post('AdAgenzyCRUD', '/items/addproducts', {
+            body: {
+              UserID: JSON.parse(localStorage.getItem('UserID')!)
+            }
+          }).then((response) => {
+            console.log('products', response)
+            if (response.message == 'Products Added') {
+              //@ts-ignore
+              API.get('AdAgenzyCRUD', '/items/addcompetitors').then((response) => {
+                console.log('competitors', response)
+              })
+            }
+          })
+        }
       }).catch(error => {
         console.log(error.response)
       });

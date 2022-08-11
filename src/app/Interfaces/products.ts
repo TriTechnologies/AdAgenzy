@@ -22,16 +22,18 @@ export interface IProductsData {
     Categories: string;
     Brands: string;
 
+    Product_ID: string;
+
    
 
 
 }
 export interface ICompetitorData {
 
-    Comp_Store: string;
-    Comp_Store_Link: string;
+    Competitor_Store: string;
+    Competitor_Store_Link: string;
 
-    Comp_prod_delivery_price: string;
-    Comp_Prod_Price: string;
+    Competitor_product_delivery: string;
+    Competitor_Product_Price: string;
 }
 

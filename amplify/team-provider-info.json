@@ -20,15 +20,15 @@
       "function": {
         "AdAgenzyCRUD": {
           "deploymentBucketName": "amplify-adagenzy-dev-164837-deployment",
-          "s3Key": "amplify-builds/AdAgenzyCRUD-456a6635745541786a53-build.zip"
+          "s3Key": "amplify-builds/AdAgenzyCRUD-417738504c4f34303144-build.zip"
         },
         "AdAgenzyProducts": {
           "deploymentBucketName": "amplify-adagenzy-dev-164837-deployment",
-          "s3Key": "amplify-builds/AdAgenzyProducts-46474d63354232713362-build.zip"
+          "s3Key": "amplify-builds/AdAgenzyProducts-6c76555536724158414b-build.zip"
         },
         "AdAgenzyCompetitors": {
           "deploymentBucketName": "amplify-adagenzy-dev-164837-deployment",
-          "s3Key": "amplify-builds/AdAgenzyCompetitors-5968704e733637426775-build.zip"
+          "s3Key": "amplify-builds/AdAgenzyCompetitors-3032314837794b693467-build.zip"
         }
       }
     }

@@ -1,5 +1,5 @@
 <div class="container">
-  
+
   <!-- Top Section of Products Details -->
   <div class="TopContainer ms-5">
     <h3 class="font-weight-bold">Manual Repricing</h3>
@@ -106,8 +106,8 @@
             </div>
             <p class="float-start">{{products.ProductData.PRODUCT_NAME}}</p>
           </td>
-          <td *ngIf=" products.ProductData.Product_SKU === '' ">NULL</td>
-          <td *ngIf=" products.ProductData.Product_SKU != '' ">{{products.ProductData.Product_SKU}}</td>
+          <td *ngIf=" products.ProductData.Product_ID === '' ">NULL</td>
+          <td *ngIf=" products.ProductData.Product_ID != '' ">{{products.ProductData.Product_ID}}</td>
           <td>-</td>
           <td>${{products.ProductData.Product_Price}}</td>
           <td>-</td>
@@ -222,14 +222,14 @@
       <div class="modal-content shadow-lg">
         <div class="modal-header">
           <div style="border: solid 2px #184777; border-radius: 8px; height: 120px; width: 120px;"
-                class="float-start d-flex justify-content-center align-items-center">
-                <img src="{{products?.ProductData?.Product_Image}}" class="float-start" width="118" height="72">
-              </div>
-              <div class="float-start ms-3 mt-2 divText DivProductModal">
-                <h3>{{products?.ProductData?.PRODUCT_NAME}}</h3>
-                <p class="headerfont"><b>Category</b>: {{products?.ProductData?.Categories}}</p>
-                <p class="headerfont"><b>Brand</b>: {{products?.ProductData?.Brands}}</p>
-              </div>
+            class="float-start d-flex justify-content-center align-items-center">
+            <img src="{{products?.ProductData?.Product_Image}}" class="float-start" width="118" height="72">
+          </div>
+          <div class="float-start ms-3 mt-2 divText DivProductModal">
+            <h3>{{products?.ProductData?.PRODUCT_NAME}}</h3>
+            <p class="headerfont"><b>Category</b>: {{products?.ProductData?.Categories}}</p>
+            <p class="headerfont"><b>Brand</b>: {{products?.ProductData?.Brands}}</p>
+          </div>
 
           <button type="button" class="btn modelbtn float-end " data-bs-dismiss="modal" aria-label="Close">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-circle"
@@ -241,72 +241,73 @@
           </button>
         </div>
 
-         <div class="modal-body">
+        <div class="modal-body">
           <div class="divText ms-4 mb-3">
             <h5>
               <b>Competitor Suggestions</b>
             </h5>
           </div>
-                            <!-- competitors data start -->
-              <!-- Table Data -->
-              <div class="TableDiv ms-5 me-5 mt-3">
-                <table class="table tableStyle table-borderless table-sm">
-                  <thead>
-                    <tr>
-                      <th scope="col">Competitors</th>
-                      <th scope="col">Store Links</th>
-                      <th scope="col">Product Price</th>
-                      <th scope="col">Delivery Price</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr *ngFor="let products of CompetitorData">
-                      <td>{{products.Comp_Store}}</td>
-                      <td><a class="btn btn-primary" target="_blank" href="{{products.Comp_Store_Link}}">Open Link</a></td>
-                      <td>{{products.Comp_Prod_Price}}</td>
-                      <td>{{products.Comp_prod_delivery_price}}</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <form>
-                  <div class="mb-3 divText row ms-3 mt-3 me-1">
-      
-                    <div class="col-lg-8">
-                      <label for="NewPrice" class="form-label">Enter New Price</label>
-                      <input type="number" class="form-control" id="NewPrice" aria-describedby="number" placeholder="$"
-                        style="width: 75%;" [formControl]="newPrice">
-                    </div>
-      
-                    <div class="col-lg-4">
-                      <label for="OldPrice" class="form-label ms-5">Old Price</label>
-                      <p type="number" class="form-control ms-2" id="OldPrice"
-                        style="width: 100%; text-align: center;">${{products?.ProductData?.Product_Price}}</p>
-                    </div>
-      
-                  </div>
-      
-                 
-      
-                  <!-- Competitor Suggestions Div -->
-                
-      
-                  <!-- Competitor Suggestions Div -->
-                
-                  <div class="d-flex justify-content-center align-items-center mt-5">
-                    <button type="submit"
-                      class="btn btn-primary-form d-flex justify-content-center align-items-center"><b>Submit</b></button>
-                  </div>
-                </form>
+          <!-- competitors data start -->
+          <!-- Table Data -->
+          <div class="TableDiv ms-5 me-5 mt-3">
+            <table class="table tableStyle table-borderless table-sm">
+              <thead>
+                <tr>
+                  <th scope="col">Competitors</th>
+                  <th scope="col">Store Links</th>
+                  <th scope="col">Product Price</th>
+                  <th scope="col">Delivery Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let competitor of CompetitorData">
+                  <td>{{competitor.Competitor_Store}}</td>
+                  <td><a class="btn btn-primary" target="_blank" href="{{competitor.Competitor_Store_Link}}">Open Link</a>
+                  </td>
+                  <td>{{competitor.Competitor_Product_Price}}</td>
+                  <td>{{competitor.Competitor_product_delivery}}</td>
+                </tr>
+              </tbody>
+            </table>
+            <form>
+              <div class="mb-3 divText row ms-3 mt-3 me-1">
+
+                <div class="col-lg-8">
+                  <label for="NewPrice" class="form-label">Enter New Price</label>
+                  <input type="number" class="form-control" id="NewPrice" aria-describedby="number" placeholder="$"
+                    style="width: 75%;" [formControl]="newPrice">
+                </div>
+
+                <div class="col-lg-4">
+                  <label for="OldPrice" class="form-label ms-5">Old Price</label>
+                  <p type="number" class="form-control ms-2" id="OldPrice" style="width: 100%; text-align: center;">
+                    ${{products?.ProductData?.Product_Price}}</p>
+                </div>
+
               </div>
-             
-            </div>
-              <!-- competitors data end -->
 
-           
 
-           
+
+              <!-- Competitor Suggestions Div -->
+
+
+              <!-- Competitor Suggestions Div -->
+
+              <div class="d-flex justify-content-center align-items-center mt-5">
+                <button type="submit" class="btn btn-primary-form d-flex justify-content-center align-items-center"
+                  (click)="updatePrice(products)"><b>Submit</b></button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+        <!-- competitors data end -->
+
+
+
+
       </div>
     </div>
   </div>
-  
+
 </div>

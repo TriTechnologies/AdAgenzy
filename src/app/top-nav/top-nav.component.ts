@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Auth } from 'aws-amplify';
 
 @Component({
   selector: 'app-top-nav',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopNavComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    Auth.currentUserInfo().then((value) => {
+      localStorage.setItem('UserID', JSON.stringify(value.id))
+    })
+  }
 
   ngOnInit(): void {
   }

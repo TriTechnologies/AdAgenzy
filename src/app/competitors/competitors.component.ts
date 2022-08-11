@@ -13,17 +13,18 @@ export class CompetitorsComponent implements OnInit {
 
   CompetitorData?: ICompetitorData[];
   products! : IProducts;
+  userID: any;
 
  
 
   constructor() {
-    
+    this.userID = JSON.parse(localStorage.getItem('UserID')!)
    }
 
   ngOnInit(): void {
 
      //@ts-ignore
-     API.get('AdAgenzyCRUD', '/items/listcompetitors').then((value) =>{
+     API.get('AdAgenzyCRUD', '/items/listcompetitors/' + this.userID).then((value) =>{
     this.CompetitorData = value as ICompetitorData[];
     });
 

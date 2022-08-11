@@ -15,15 +15,18 @@ export class ProductsComponent implements OnInit {
   listproducts?: IProducts[];
   products? : IProducts;
   CompetitorData!: ICompetitorData[];
+  userID: any;
 
   constructor(private router: Router) { 
   }
 
   ngOnInit(): void {
-
- 
+    this.userID = JSON.parse(localStorage.getItem('UserID')!)
+    console.log(this.userID)
+    
     //@ts-ignore
-    API.get('AdAgenzyCRUD', '/items/listproducts').then((value) =>{
+    API.get('AdAgenzyCRUD', '/items/listproducts/' + this.userID).then((value) =>{
+      console.log(value)
       this.listproducts = value.Items as IProducts[];
       localStorage.setItem("listproducts" , JSON.stringify(value))
       console.log(this.listproducts);

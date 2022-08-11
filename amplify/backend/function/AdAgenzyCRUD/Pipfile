@@ -11,6 +11,9 @@ boto3 = "*"
 flask-cors = "*"
 flask = "*"
 aws-wsgi = "*"
+woocommerce = "*"
+requests = "*"
+bs4 = "*"
 
 [requires]
 python_version = "3.8"

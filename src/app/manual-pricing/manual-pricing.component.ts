@@ -14,16 +14,18 @@ export class ManualPricingComponent implements OnInit {
   listproducts?: IProducts[];
   products! : IProducts;
   CompetitorData!: ICompetitorData[];
+  userID: any;
 
   newPrice = new FormControl;
 
   constructor() {
+    this.userID = JSON.parse(localStorage.getItem('UserID')!)
    }
 
   ngOnInit(): void {
 
     //@ts-ignore
-    API.get('AdAgenzyCRUD', '/items/repricing').then((value) =>{
+    API.get('AdAgenzyCRUD', '/items/listrepricing/' + this.userID).then((value) =>{
       console.log(value);
       this.listproducts = value as IProducts[];
     })
@@ -45,7 +47,8 @@ export class ManualPricingComponent implements OnInit {
   CompDetail(data:any){
     this.products = data;
     console.log(data)
-  
+
+    this.newPrice.setValue(data.ProductData.Product_Price)
     this.CompetitorData = data.CompetitorData
   
      //@ts-ignore
@@ -54,4 +57,17 @@ export class ManualPricingComponent implements OnInit {
     //   });
   
     }
+
+  updatePrice(ProductData: any) {
+    ProductData.ProductData.Product_Price = this.newPrice.value.toString();
+    console.log(ProductData)
+    API.put('AdAgenzyCRUD', '/items/updateprice', {
+      body: {
+        ProductData: {...ProductData},
+        UserID: this.userID
+      }
+    }).then((value) => {
+      console.log(value)
+    })
+  }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Auth } from 'aws-amplify';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +11,7 @@ export class AppComponent {
 
   constructor( ) {
   }
-  ngOnInit() {
-  
-  }
+  ngOnInit() {}
   ngOnDestroy() {
     localStorage.clear()
   }

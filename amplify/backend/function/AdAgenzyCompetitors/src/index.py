@@ -32,20 +32,16 @@ def handler(event, context):
 
     for xyz in item['Items']:
         barcode = xyz['ProductData']['Product_Barcode']
-        Product_Link = xyz['ProductData']['Product_Link']
-        
-    
-        
-        
+        Product_Link = xyz['ProductData']['Product_Link']     
 
         if barcode is None:
                 continue
         else:
-                
+    
                 Comptitor = []
                 gtin_code = barcode
                 params = {
-                    'api_key': 'A11509235C3E444FAE0F2992497FED98',
+                    'api_key': '7F8E102F85D1471F9114BE9AF5FCFDCB',
                     'location': 'Denmark',
                     'search_type': 'shopping',
                     'q': gtin_code,
@@ -75,6 +71,49 @@ def handler(event, context):
                             soup = BeautifulSoup(r.content, 'html.parser')
                             # Capture the Competitor have different div name
                             mydivs = soup.find_all("div", {"class": "t9KcM"})
+                            # capture the Competitor from different div 
+                            last = soup.find(class_="qEeQL")
+                            if last is None:
+                                continue
+                            else:
+                                last_p = last.find(class_="WwE9ce")
+                                last_d = last.find(class_="izR5zd")
+                                last_links = last.find('a')
+                                print(last_links.text)
+                                print(last_p.text)
+
+                                if last_d is None:
+                                    last_d = "None"
+                                    print(last_d)
+                                else:
+                                    last_d = last_d.text.split('.')[0]
+                                    last_d = last_d.split('+')[-1]
+                                    print(last_d)
+
+                                last_store_links = last_links['href']
+                                #  CLEAN the LINKS
+                                ch = 'q='
+                                # Remove all characters before the character 'q=' from string
+                                last_store_links = last_store_links.split(ch, 1)[-1]
+                                ch = '&'
+                                # Remove all characters after the character '&' from string
+                                last_store_links = last_store_links.split(ch, 1)[0]
+                                ch = '%'
+                                # Remove all characters after the character '&' from string
+                                last_store_links = last_store_links.split(ch, 1)[0]
+                                print(last_store_links)
+
+                                ll = {
+                                    "Competitor_Store": last_links.text,
+
+                                    "Competitor_Store_Link": last_store_links,
+
+                                    "Competitor_product_delivery": last_d,
+
+                                    "Competitor_Product_Price": last_p.text
+                                }
+
+                                Comptitor.append(ll)
                             # Capture the Competitor have same div name         
                             for x in mydivs:
                                 comp_price = x.find(class_="WwE9ce")
@@ -103,7 +142,7 @@ def handler(event, context):
                                     "Comp_Store": store_name,
                                     "Comp_Store_Link": store_links,
                                     "Comp_prod_delivery_price": competitor_delivery,
-                                    "Comp_Prod_Price": comp_price.text.split('.')[0]
+                                    "Comp_Prod_Price": comp_price.text
                                 }
                                 
 
@@ -111,9 +150,8 @@ def handler(event, context):
 
 
                         else:
-                            print("We can't find Competitor's from this Product")
-                    print("let's add in db")
-                    abc = table.update_item(
+                            tttt = "We can't find Competitor's from this Product"
+                    table.update_item(
 
                             Key={"PK": xyz['PK'],
                                 'SK': 'products'},
@@ -127,11 +165,10 @@ def handler(event, context):
                                 ":ProductData": xyz['ProductData'],
                                 ":CompetitorData": Comptitor
                             }
-                        )
-                    print(abc)      
+                    )      
 
                 else:
-                    print("Barcode data is Not found through google Merchant")
+                    tt = "Barcode data is Not found through google Merchant"
 
                 total = {
                     gtin_code : Comptitor
@@ -139,6 +176,8 @@ def handler(event, context):
 
                 arrr.append(total) 
 
-    print("ALL COMPETITORS",arrr)
+    print("ALL Lenght COMPETITORS",len(arrr))
+    print("ALL COMPETITORS", arrr)
+
 
             

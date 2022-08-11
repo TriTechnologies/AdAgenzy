@@ -14,7 +14,7 @@ def handler(event, context):
         consumer_secret="cs_080b1d9fcc10d021b29a77a3bd06f2615f31ed94",
         wp_api=True,
         version="wc/v3",
-        timeout=15
+        timeout=50
     )   
     page = 1
     while True:
