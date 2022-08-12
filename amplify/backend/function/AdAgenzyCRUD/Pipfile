@@ -7,13 +7,6 @@ verify_ssl = true
 
 [packages]
 src = {editable = true, path = "./src"}
-boto3 = "*"
-flask-cors = "*"
-flask = "*"
-aws-wsgi = "*"
-woocommerce = "*"
-requests = "*"
-bs4 = "*"
 
 [requires]
 python_version = "3.8"

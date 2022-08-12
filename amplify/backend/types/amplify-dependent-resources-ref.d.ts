@@ -1,17 +1,5 @@
 export type AmplifyDependentResourcesAttributes = {
     "function": {
-        "AdAgenzyProducts": {
-            "Name": "string",
-            "Arn": "string",
-            "Region": "string",
-            "LambdaExecutionRole": "string"
-        },
-        "AdAgenzyCompetitors": {
-            "Name": "string",
-            "Arn": "string",
-            "Region": "string",
-            "LambdaExecutionRole": "string"
-        },
         "AdAgenzyCRUD": {
             "Name": "string",
             "Arn": "string",
@@ -20,7 +8,7 @@ export type AmplifyDependentResourcesAttributes = {
         }
     },
     "auth": {
-        "adagenzyf5062377": {
+        "adagenzy": {
             "IdentityPoolId": "string",
             "IdentityPoolName": "string",
             "UserPoolId": "string",
@@ -31,16 +19,6 @@ export type AmplifyDependentResourcesAttributes = {
         }
     },
     "api": {
-        "AdAgenzyProducts": {
-            "RootUrl": "string",
-            "ApiName": "string",
-            "ApiId": "string"
-        },
-        "AdAgenzyCompetitors": {
-            "RootUrl": "string",
-            "ApiName": "string",
-            "ApiId": "string"
-        },
         "AdAgenzyCRUD": {
             "RootUrl": "string",
             "ApiName": "string",
@@ -57,6 +35,14 @@ export type AmplifyDependentResourcesAttributes = {
             "SortKeyName": "string",
             "SortKeyType": "string",
             "Region": "string"
+        }
+    },
+    "hosting": {
+        "S3AndCloudFront": {
+            "Region": "string",
+            "HostingBucketName": "string",
+            "WebsiteURL": "string",
+            "S3BucketSecureURL": "string"
         }
     }
 }

@@ -11,12 +11,6 @@
     "env": {
       "Type": "String"
     },
-    "AdAgenzyProducts": {
-      "Type": "String"
-    },
-    "AdAgenzyCompetitors": {
-      "Type": "String"
-    },
     "AdAgenzyCRUD": {
       "Type": "String"
     }

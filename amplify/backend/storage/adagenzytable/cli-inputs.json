@@ -9,6 +9,14 @@
     "fieldName": "SK",
     "fieldType": "string"
   },
-  "gsi": [],
+  "gsi": [
+    {
+      "name": "GSI1",
+      "partitionKey": {
+        "fieldName": "SK",
+        "fieldType": "string"
+      }
+    }
+  ],
   "triggerFunctions": []
 }

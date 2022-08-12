@@ -85,8 +85,8 @@
           </div>
         </td>
         <td>{{products?.ProductData?.PRODUCT_NAME}}</td>
-        <td *ngIf=" products?.ProductData?.Product_SKU === '' ">NULL</td>
-        <td *ngIf=" products?.ProductData?.Product_SKU != '' ">{{products?.ProductData?.Product_SKU}}</td>
+        <td *ngIf=" products!.ProductData.Product_ID === '' ">NULL</td>
+        <td *ngIf=" products!.ProductData.Product_ID != '' ">{{products!.ProductData.Product_ID}}</td>
         <td>-</td>
         <td>${{products?.ProductData?.Product_Price}}</td>
         <td>-</td>

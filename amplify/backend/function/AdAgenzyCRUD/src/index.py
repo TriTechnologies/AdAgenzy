@@ -10,7 +10,6 @@ import requests
 from bs4 import BeautifulSoup
 import json
 
-
 dynamodb = boto3.resource("dynamodb")
 table = dynamodb.Table('adagenzytable-dev')
 
@@ -52,6 +51,7 @@ def list_products(UserID):
             '#SK': 'SK'
         }
     )
+    
     return jsonify(item)
 
 @app.route(BASE_ROUTE + '/listcompetitors' + '/<UserID>', methods=['GET'])
@@ -93,8 +93,8 @@ def list_competitors(UserID):
             print(i)
             for c in i['CompetitorData']:
                 comp_list = {
-                    'Comp_Store' : c['Competitor_Store'],
-                    'Comp_Store_Link': c['Competitor_Store_Link']
+                    'Competitor_Store' : c['Competitor_Store'],
+                    'Competitor_Store_Link': c['Competitor_Store_Link']
                 }
                 comp_arr.append(comp_list)  
 
@@ -494,5 +494,3 @@ def update_price():
 
 def handler(event, context):
     return awsgi.response(app, event, context)
-
-   
