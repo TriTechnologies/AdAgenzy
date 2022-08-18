@@ -3,6 +3,11 @@ import {  IProducts, IProductsData, ICompetitorData } from '../Interfaces/produc
 import { API } from 'aws-amplify';
 import { __values } from 'tslib';
 import { NavigationExtras, TitleStrategy, Router } from '@angular/router';
+import { ProductsService } from "src/app/products.service";
+import { ngxCsv } from "ngx-csv/ngx-csv";
+
+
+
 
 @Component({
   selector: 'app-products',
@@ -11,29 +16,39 @@ import { NavigationExtras, TitleStrategy, Router } from '@angular/router';
 })
 
 export class ProductsComponent implements OnInit {
-  
+
+
+
+
+  searchText!: string;
   listproducts?: IProducts[];
   products? : IProducts;
   CompetitorData!: ICompetitorData[];
   userID: any;
 
-  constructor(private router: Router) { 
+
+  ProductData?: IProductsData;
+
+
+
+  constructor(private router: Router, private productsService: ProductsService) { 
   }
 
   ngOnInit(): void {
-    this.userID = JSON.parse(localStorage.getItem('UserID')!)
-    console.log(this.userID)
-    
+    this.userID = JSON.parse(localStorage.getItem('UserID')!)   
     //@ts-ignore
     API.get('AdAgenzyCRUD', '/items/listproducts/' + this.userID).then((value) =>{
-      console.log(value)
       this.listproducts = value.Items as IProducts[];
       localStorage.setItem("listproducts" , JSON.stringify(value))
       console.log(this.listproducts);
     });
-    
+
+   
+  
   }
 
+
+  
   ProductDetails(data:any) {
     const nav: NavigationExtras = {
       state: {
@@ -52,7 +67,16 @@ export class ProductsComponent implements OnInit {
   //  API.get('AdAgenzyCRUD', '/items/listproducts').then((value) =>{
   //   this.CompetitorData = value.Items[2].CompetitorData  as ICompetitorData[];
   //   });
+  }
 
+  // download(){
+  //   this.productsService.downloadFile(this.listproducts, 'jsontocsv');
+  // }
+
+  results(){
+    new ngxCsv(this.listproducts, 'My Report')
+    
+    
   }
 
 }

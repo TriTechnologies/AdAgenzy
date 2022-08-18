@@ -14,7 +14,7 @@
     },
     "categories": {
       "auth": {
-        "undefined": {}
+        "adagenzy": {}
       },
       "function": {
         "AdAgenzyCRUD": {

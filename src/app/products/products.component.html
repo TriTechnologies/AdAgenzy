@@ -93,7 +93,7 @@
       </div>
     </div>
 
-    <button class="btn btn-primary btn-md float-end me-5 dropdown-toggle" style="border-radius: 20px;">
+    <button class="btn btn-primary btn-md float-end me-5 dropdown-toggle" style="border-radius: 20px;" (click)="results()">
       Export to CSV
     </button>
 
@@ -172,12 +172,15 @@
 
   <!-- Table Data -->
   <div class="TableDiv ms-5 me-5 mt-3">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search Here" [(ngModel)]="searchText">
+  </div>
     <table class="table tableStyle table-borderless table-sm">
       <thead>
         <tr>
           <th scope="col">
             <div class="rowauto" data-toggle="buttons">
-              <input type="checkbox" id="checkboxAll" class="mt-2" name="selectall" autocomplete="off">
+              <input type="checkbox" id="checkboxAll" class="mt-2" name="selectall" autocomplete="on">
             </div>
           </th>
           <th scope="col">Product Name</th>
@@ -196,7 +199,7 @@
       </thead>
       <tbody>
 
-        <tr *ngFor="let products of listproducts ">
+        <tr *ngFor="let products of listproducts | filter:searchText">
           <th scope="row">
             <div data-toggle="buttons">
               <input type="checkbox" id="checkbox1" class="chkboxname mt-2 " name="check_1">
@@ -317,7 +320,7 @@
           </td>
         </tr>
       </tbody>
-    </table>
+    </table>   
   </div>
 
   <!-- Modal -->

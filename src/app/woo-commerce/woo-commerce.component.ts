@@ -25,6 +25,9 @@ import {v4 as uuidv4} from 'uuid';
 })
 export class WooCommerceComponent implements OnInit {
 
+
+  Send: any = undefined
+  PSend: any = undefined
   attachstores!: IAttachstore;
   form: FormGroup;
   data: any
@@ -59,6 +62,7 @@ export class WooCommerceComponent implements OnInit {
       }).then(response => {
         console.log(response)
         if (response.message == 'Store Attached') {
+          this.Send = response
           API.post('AdAgenzyCRUD', '/items/addproducts', {
             body: {
               UserID: JSON.parse(localStorage.getItem('UserID')!)
@@ -66,6 +70,7 @@ export class WooCommerceComponent implements OnInit {
           }).then((response) => {
             console.log('products', response)
             if (response.message == 'Products Added') {
+              this.PSend = response
               //@ts-ignore
               API.get('AdAgenzyCRUD', '/items/addcompetitors').then((response) => {
                 console.log('competitors', response)

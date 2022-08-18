@@ -8,9 +8,9 @@
  .amplify-button{
  cursor: wait;
  }
- .amplify-tabs {
+ /* .amplify-tabs {
   display: none;
-}
+} */
 
   [data-amplify-authenticator][data-variation=modal] {
     background-image: url(./assets/Login-Page.png);

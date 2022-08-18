@@ -54,7 +54,7 @@ const routes: Routes = [
         component: ManualPricingComponent
       },
       {
-        path: "bulkpricing",
+        path: "settings",
         component: BulkPricingComponent
       },
       {
