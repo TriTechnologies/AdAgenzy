@@ -110,6 +110,19 @@ button.btn.btn-primary[disabled] {
 
 }
 
+.circularLoader{
+  height: 50px;
+  width: 50px;
+  margin-top: 100%;
+  opacity: 1;
+  background-color: transparent;
+  border: 5px solid #f3f3f3; /* Light grey */
+  border-top: 5px solid #0D3256;
+  border-radius: 50%;
+  
+}
+
+
 @keyframes fadeInOpacity {
   0% {
     opacity: 0;

@@ -10,7 +10,7 @@ export class TopNavComponent implements OnInit {
 
   constructor() {
     Auth.currentUserInfo().then((value) => {
-      localStorage.setItem('UserID', JSON.stringify(value.attributes.sub))
+      localStorage.setItem('UserID', JSON.stringify(value.id))
       console.log(value)
     })
   }

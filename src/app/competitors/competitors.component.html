@@ -14,10 +14,17 @@
 
     <p class="Text mt-2 me-2 ms-5 float-start">Items per page</p>
 
-    <button class="btn btn-primary btn-md me-5 dropdown-toggle" style="border-radius: 20px;">
-      10
+    <button class="btn btn-primary btn-md me-5" style="border-radius: 20px;">
+      {{items}}
     </button>
+
+    <button class="btn btn-primary btn-md float-end me-5" style="border-radius: 20px;" (click)="results()">
+      Export to CSV
+    </button>
+
   </div>
+
+  
 
   <!-- Table Data -->
   <div class="TableDiv ms-5 me-5 mt-3">

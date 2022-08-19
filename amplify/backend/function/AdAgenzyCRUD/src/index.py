@@ -203,6 +203,7 @@ def add_products():
         prod_price = s['price']
         prod_stock = s['stock_status']
         image = s['images']
+        print(image)
         categories = s['categories']
         brands = s['brands']
         category_arr = []
@@ -213,8 +214,10 @@ def add_products():
         for b in brands:
             brand = b['name']
             brand_arr.append(brand)
+        prod_image = ""    
         for i in image:
             prod_image = i['src']
+            print(prod_image)
             break
         prod_json = {
             'Product_ID' : prod_id,
