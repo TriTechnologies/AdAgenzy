@@ -103,6 +103,47 @@ def list_competitors(UserID):
 
     return jsonify(comp_arr)  
 
+
+@app.route(BASE_ROUTE + '/excelproducts' + '/<UserID>', methods=['GET'])
+def excel_products(UserID):
+    excel_arr = []
+    storeItem = table.query( 
+        IndexName='GSI1',
+        KeyConditionExpression='#SK = :value',
+        ExpressionAttributeValues={
+            ':value': 'store'
+        },
+        ExpressionAttributeNames={
+            '#SK': 'SK'
+        }
+    )
+
+    for store in storeItem['Items']:
+        if UserID in store['UsersData']:
+            storeID = store['PK']
+        
+        else:
+            return jsonify(message="No store attached")
+
+    item = table.query(
+        IndexName='StoreID-SK-index',
+        KeyConditionExpression='#StoreID = :val AND #SK = :value',
+        ExpressionAttributeValues={
+            ':val': storeID,
+            ':value': 'products'
+        },
+        ExpressionAttributeNames={
+            '#StoreID': 'StoreID',
+            '#SK': 'SK'
+        }
+    )
+
+    for i in item['Items']:
+        
+        excel_arr.append(i['ProductData'])  
+    
+    return jsonify(excel_arr)     
+
 @app.route(BASE_ROUTE + '/listrepricing'  + '/<UserID>', methods=['GET'])
 def listrepricing(UserID):
     re_price = []
@@ -211,9 +252,11 @@ def add_products():
         for c in categories:
             category = c['name']
             category_arr.append(category)
+        category_arr = " , ".join(category_arr)    
         for b in brands:
             brand = b['name']
             brand_arr.append(brand)
+        brand_arr = " , ".join(brand_arr)    
         prod_image = ""    
         for i in image:
             prod_image = i['src']
@@ -281,7 +324,7 @@ def add_competitors():
         else:
             gtin_code = barcode
             params = {
-                'api_key': 'A07D7AC7279D48D48CE66127059FD501',
+                'api_key': '33472200928D4C4294301FE55DD2FB07',
                 'location': 'Denmark',
                 'search_type': 'shopping',
                 'q': gtin_code,
@@ -296,9 +339,9 @@ def add_competitors():
 
             api_result = requests.get('https://api.scaleserp.com/search', params)
             api_chk = str(api_result)
-
+            Comptitor = []
             if api_chk == "<Response [200]>":
-                Comptitor = []
+                
                 # print the CSV response from Scale SERP
                 results = api_result.content.decode()
                 json_stats = json.loads(results)

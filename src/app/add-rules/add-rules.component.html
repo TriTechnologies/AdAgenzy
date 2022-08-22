@@ -1,0 +1,152 @@
+<div class="container">
+
+  <!-- Top Section of Add Rules -->
+  <div class="TopContainer ms-5">
+    <h4 class="font-weight-bold">Add Rules</h4>
+  </div>
+
+  <!-- Button and Toggles -->
+  <div class="Button ms-5 mt-5">
+
+    <button class="btn btn-primary btn-md col-1" routerLink="/home/settings" style="border-radius: 20px;">
+      Back
+    </button>
+
+  </div>
+
+  <div class="TableDiv ms-5 me-5 mt-3 shadow-lg">
+
+    <div class="row ms-2">
+
+      <div class="col-lg-3 mt-3">
+        <h6 class="font-weight-bold">General</h6>
+      </div>
+
+      <div class="col-lg-6 mt-3">
+        <div class="mb-3">
+          <label for="Rule Title" class="form-label">Rule Title</label>
+          <input type="rule" formControlName="rule" class="form-control" id="rule" aria-describedby="url">
+        </div>
+        <div class="mb-3">
+          <p>Priority (bigger value will match first)</p>
+          <input type="value" formControlName="value" class="form-control length" id="value" value="50"
+            aria-describedby="url">
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-primary btn-md btnnewbtn col-3" style="border-radius: 20px;">
+            Save Settings
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row ms-2">
+
+      <div class="col-lg-3 mt-3">
+        <h6 class="font-weight-bold">Price Changes</h6>
+      </div>
+
+      <div class="col-lg-3 mt-3">
+        <p style="font-family: italic;">Suggestion</p>
+        <button class="SettingsBtn" routerLink="/home/pricechanges"><b>Change Settings</b></button>
+      </div>
+
+      <div class="col-lg-6 mt-3">
+        <p>Should price changes be done automatically or male suggestions
+          for you to approve?</p>
+      </div>
+
+    </div>
+
+    <div class="row ms-2">
+
+      <div class="col-lg-3 mt-3">
+        <h6 class="font-weight-bold">Strategy</h6>
+      </div>
+
+      <div class="col-lg-3 mt-3">
+        <p style="font-family: italic;">Match cheapest with same price</p>
+        <button class="SettingsBtn" routerLink=""><b>Change Settings</b></button>
+      </div>
+
+      <div class="col-lg-6 mt-3">
+        <p>How do you want to respond to competitor prices?</p>
+      </div>
+
+    </div>
+
+    <div class="row ms-2">
+
+      <div class="col-lg-3 mt-3">
+        <h6 class="font-weight-bold">Price field and min.max restrictions</h6>
+      </div>
+
+      <div class="col-lg-3 mt-3">
+        <p style="font-family: italic;">Disabled - no repricing at the moment <b class="bold-italic">Miniumum price Maximum Price</b></p>
+        <button class="SettingsBtn" routerLink=""><b>Change Settings</b></button>
+      </div>
+
+      <div class="col-lg-6 mt-3">
+        <p>We currently support updating the new price into special price and
+          standard price. If there is a date from or date to on the special price,
+          it is assumed you are running your own campaign and it will not be
+          adjusted by the repricing robot.</p>
+      </div>
+
+    </div>
+    
+    <div class="row ms-2">
+
+      <div class="col-lg-3 mt-3">
+        <h6 class="font-weight-bold">Competitors without stock</h6>
+      </div>
+
+      <div class="col-lg-3 mt-3">
+        <p style="font-family: italic;">Include competitors with product not in stock</p>
+        <button class="SettingsBtn" routerLink=""><b>Change Settings</b></button>
+      </div>
+
+      <div class="col-lg-6 mt-3">
+        <p>How do you want to respond to prices of competitors which do not
+          have the product on stock? Please be aware that fetch stock information
+          from competitors can be less reliable than fetching price - among others,
+          because some might have delivery even when out of stock according to
+          the code of a page</p>
+      </div>
+
+    </div>
+
+    <div class="row ms-2">
+
+      <div class="col-lg-3 mt-3">
+        <h6 class="font-weight-bold">Round down price to look more nicely</h6>
+      </div>
+
+      <div class="col-lg-3 mt-3">
+        <button class="SettingsBtn" routerLink=""><b>Change Settings</b></button>
+      </div>
+
+      <div class="col-lg-6 mt-3">
+        <p>A price that is only calculated by a robot might not look nice - such
+          as 100.12. You can choose one or more rounding options to fix that.
+          If you choose several, then the nearest rounding options will be used.</p>
+      </div>
+
+    </div>
+
+    <div class="row ms-2">
+
+      <div class="col-lg-3 mt-3">
+        <h6 class="font-weight-bold">Filter products</h6>
+      </div>
+
+      <div class="col-lg-3 mt-3">
+        <button class="SettingsBtn" routerLink=""><b>Change Settings</b></button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

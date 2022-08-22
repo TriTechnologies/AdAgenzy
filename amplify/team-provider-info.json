@@ -14,13 +14,12 @@
     },
     "categories": {
       "auth": {
-        "adagenzy": {},
         "adagenzy34e12719": {}
       },
       "function": {
         "AdAgenzyCRUD": {
           "deploymentBucketName": "amplify-adagenzy-dev-34342-deployment",
-          "s3Key": "amplify-builds/AdAgenzyCRUD-67457a6f435142634a4a-build.zip"
+          "s3Key": "amplify-builds/AdAgenzyCRUD-4f2b3945366c64387362-build.zip"
         }
       }
     }

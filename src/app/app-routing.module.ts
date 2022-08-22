@@ -17,6 +17,9 @@ import { WooCommerceComponent } from './woo-commerce/woo-commerce.component';
 import { MyAccountComponent } from './my-account/my-account.component';
 
 import { LoginPageComponent } from './login-page/login-page.component';
+import { AddRulesComponent } from './add-rules/add-rules.component';
+
+import { PriceChangesComponent } from './price-changes/price-changes.component';
 
 const routes: Routes = [
   {
@@ -68,6 +71,14 @@ const routes: Routes = [
       {
         path: "myaccount",
         component: MyAccountComponent
+      },
+      {
+        path: "addrules",
+        component: AddRulesComponent
+      },
+      {
+        path: "pricechanges",
+        component: PriceChangesComponent
       }
     ]
   },

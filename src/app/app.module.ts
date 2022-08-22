@@ -29,12 +29,17 @@ import { MyAccountComponent } from './my-account/my-account.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
-import { NgxPaginationModule } from 'ngx-pagination';
 
-import { DataTablesModule } from 'angular-datatables';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { ProductsService } from "src/app/products.service";
+import { AddRulesComponent } from './add-rules/add-rules.component';
+import { PriceChangesComponent } from './price-changes/price-changes.component';
+import { StrategyComponent } from './strategy/strategy.component';
+import { PriceMinMaxComponent } from './price-min-max/price-min-max.component';
+import { CompetitorsStockComponent } from './competitors-stock/competitors-stock.component';
+import { RoundPriceComponent } from './round-price/round-price.component';
+import { FilterProductsComponent } from './filter-products/filter-products.component';
 
 
 
@@ -55,17 +60,22 @@ import { ProductsService } from "src/app/products.service";
     IntegrationsComponent,
     WooCommerceComponent,
     MyAccountComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    AddRulesComponent,
+    PriceChangesComponent,
+    StrategyComponent,
+    PriceMinMaxComponent,
+    CompetitorsStockComponent,
+    RoundPriceComponent,
+    FilterProductsComponent
   ],
   imports: [
     BrowserModule,
     Ng2SearchPipeModule,
     AppRoutingModule,
-    DataTablesModule,
     HttpClientModule,
     ReactiveFormsModule, 
     AmplifyAuthenticatorModule,
-    NgxPaginationModule,
     FormsModule
   ],
   providers: [ProductsService],

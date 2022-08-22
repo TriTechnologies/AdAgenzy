@@ -9,10 +9,11 @@
   color: #124274;
 }
 
-.tablebtn{
-    background-color: #C7DEF5 !important;
-    font-size: 90%;
+.tablebtn {
+  background-color: #C7DEF5 !important;
+  font-size: 90%;
 }
+
 .divText {
   color: #184777;
   margin-right: 35%;
@@ -23,29 +24,30 @@
   margin-top: -86px;
 }
 
-.tablebtn:hover{
-    background-color: #184777 !important;
+.tablebtn:hover {
+  background-color: #184777 !important;
 }
 
-.btntable{
-    background-color: #EDF5FF !important;
+.btntable {
+  background-color: #EDF5FF !important;
 }
 
-.tablebtnSecondary{
-    background-color: #4A82BC !important;
-    color: white;
-    font-size: 90%;
+.tablebtnSecondary {
+  background-color: #4A82BC !important;
+  color: white;
+  font-size: 90%;
 }
 
 .tablebtnSecondary:hover {
-    color: #184777 !important;
-    background-color: #C7DEF5 !important;
+  color: #184777 !important;
+  background-color: #C7DEF5 !important;
 }
 
-td, tr{
-    text-align: center;
-    border-bottom: solid 2px #C7DEF5;
-    /* font-size: 90%; */
+td,
+tr {
+  text-align: center;
+  border-bottom: solid 2px #C7DEF5;
+  /* font-size: 90%; */
 }
 
 p {
@@ -103,7 +105,7 @@ thead {
   position: fixed;
 }
 
-.DropDiv{
+.DropDiv {
   width: 15%;
   border-radius: 9px;
   margin-left: 9%;
@@ -111,7 +113,7 @@ thead {
 
 }
 
-.FormBtn{
+.FormBtn {
   border-radius: 24px;
   background-color: #124274 !important;
   color: white;
@@ -119,11 +121,11 @@ thead {
 }
 
 .zoom {
-  transition: transform .2s; /* Animation */
+  transition: transform .2s;
+  /* Animation */
   margin: 0 auto;
 }
 
 .zoom:hover {
   transform: scale(1.4);
 }
-
