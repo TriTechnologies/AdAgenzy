@@ -1,43 +1,58 @@
 <div class="container">
 
-    <!-- Top Section of Add Rules -->
-    <div class="TopContainer ms-5">
-      <h4 class="font-weight-bold">Price Changes</h4>
-    </div>
-  
-    <!-- Button and Toggles -->
-    <div class="Button ms-5 mt-5">
-  
-      <button class="btn btn-primary btn-md col-1" routerLink="/home/addrules" style="border-radius: 20px;">
-        Back
-      </button>
-  
-    </div>
-  
-    <div class="TableDiv ms-5 me-5 mt-3 shadow-lg">
-  
-      <div class="row ms-2">
+  <!-- Top Section of Add Rules -->
+  <div class="TopContainer ms-5">
+    <h4 class="font-weight-bold">Price Changes</h4>
+  </div>
 
-        <form>
-        <h6 class="mt-2"><b>Price Changes</b></h6>
-        <p>Should price changes be done automaticaly or make suggestions for you to improve?</p>
+  <!-- Button and Toggles -->
+  <div class="Button ms-5 mt-5">
 
-        <label class="alignText">
-          <input type="radio" name="radio" id="Suggestion" value="Make Suggestion. Price changes approved manually." checked/>
-          <label for="Suggestion">Make Suggestion. Price changes approved manually.</label>
+    <button class="btn btn-primary btn-md col-1" routerLink="/home/addrules" style="border-radius: 20px;">
+      Back
+    </button>
+
+  </div>
+
+  <div class="TableDiv ms-5 me-5 mt-3 shadow-lg">
+
+    <div class="row ms-0">
+
+      <form >
+        <h5 class=" col-lg-12 mt-2"><b>Price Changes</b></h5>
+
+        <p class="col-lg-12 mt-3">Should price changes be done automaticaly or make suggestions for you to improve?</p>
+        <div class="row ms-3">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" [value]='false' [formControl]="setting_flag">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Make Suggestions. Price changes aproved mannualy.
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2" [value]='true' [formControl]="setting_flag">
+            <label class="form-check-label" for="flexRadioDefault2">
+              Automatically. Price changes done by monitoring service immiediately
+            </label>
+          </div>
+          <button class="btn btn-primary mt-3 btnnewbtn col-2" style="border-radius: 20px;" type="submit" (click)="sendValue()">Save Settings</button>
+        </div>
+
+        <label class="col-lg-12 alignText">
+          <!-- <input type="radio" name="radio" id="Suggestion" value="Make Suggestion. Price changes approved manually." checked/> -->
+          <!-- <label for="Suggestion">Make Suggestion. Price changes approved manually.</label> -->
         </label>
         <br>
         <label>
-          <input type="radio" name="radio"/>
+          <!-- <input type="radio" name="radio"/> -->
         </label>
         <br>
         <label>
-          <input type="radio" name="radio"/>
+          <!-- <input type="radio" name="radio"/> -->
         </label>
 
       </form>
-      </div>
     </div>
-  
   </div>
-  
+
+</div>
