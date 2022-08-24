@@ -1,1 +1,58 @@
-<p>round-price works!</p>
+<div class="container">
+
+  <!-- Top Section of Add Rules -->
+  <div class="TopContainer ms-5">
+    <h4 class="font-weight-bold">Round down price to look more nicely</h4>
+  </div>
+
+  <!-- Button and Toggles -->
+  <div class="Button ms-5 mt-5">
+
+    <button class="btn btn-primary btn-md col-1" routerLink="/home/addrules" style="border-radius: 20px;">
+      Back
+    </button>
+
+  </div>
+
+  <div class="TableDiv ms-5 me-5 mt-3 shadow-lg">
+
+    <div class="row ms-0">
+
+      <form>
+        <h5 class=" col-lg-12 mt-2"><b>Round down prices to look more nicely</b></h5>
+        <p class="col-lg-12 mt-3">A price that is only calculated by a robot might not look nice - such as 100.12. You
+          can choose one or more rounding options to fix that. If you
+          choose several, then the nearest rounding option will be used.</p>
+        <div class="row ms-3">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              to 25 cents (xx.00, xx.25, xx.50, xx.75)
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+            <label class="form-check-label" for="flexRadioDefault2">
+              to 95 cents (xx.95)
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+            <label class="form-check-label" for="flexRadioDefault3">
+              to 99 cents (xx.99)
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+            <label class="form-check-label" for="flexRadioDefault4">
+              to 00 cents (xx.00)
+            </label>
+          </div>
+          <button class="btn btn-primary mt-3 btnnewbtn col-2" style="border-radius: 20px;" type="submit">Save
+            Settings</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>

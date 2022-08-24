@@ -1,1 +1,48 @@
-<p>competitors-stock works!</p>
+<div class="container">
+
+  <!-- Top Section of Add Rules -->
+  <div class="TopContainer ms-5">
+    <h4 class="font-weight-bold">Competitors without stock</h4>
+  </div>
+
+  <!-- Button and Toggles -->
+  <div class="Button ms-5 mt-5">
+
+    <button class="btn btn-primary btn-md col-1" routerLink="/home/addrules" style="border-radius: 20px;">
+      Back
+    </button>
+
+  </div>
+
+  <div class="TableDiv ms-5 me-5 mt-3 shadow-lg">
+
+    <div class="row ms-0">
+
+      <form>
+        <h5 class=" col-lg-12 mt-2"><b>Competitors without stock</b></h5>
+        <p class="col-lg-12 mt-3">How do you want to respond to prices of competitors which do not have the product on
+          stock? Please be aware that fetching stock information
+          from competitors can be less reliable than fetching price - among others, because some might have fast
+          delivery even when out of stock according
+          to the code of a page.</p>
+        <div class="row ms-3">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Ignore competitors with product not in stock
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+            <label class="form-check-label" for="flexRadioDefault2">
+              Include competitors with product not in stock
+            </label>
+          </div>
+          <button class="btn btn-primary mt-3 btnnewbtn col-2" style="border-radius: 20px;" type="submit">Save
+            Settings</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>

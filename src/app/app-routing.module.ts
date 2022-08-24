@@ -20,6 +20,13 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { AddRulesComponent } from './add-rules/add-rules.component';
 
 import { PriceChangesComponent } from './price-changes/price-changes.component';
+import { StrategyComponent } from './strategy/strategy.component';
+
+import { PriceMinMaxComponent } from './price-min-max/price-min-max.component';
+import { CompetitorsStockComponent } from './competitors-stock/competitors-stock.component';
+
+import { RoundPriceComponent } from './round-price/round-price.component';
+import { FilterProductsComponent } from './filter-products/filter-products.component';
 
 const routes: Routes = [
   {
@@ -79,6 +86,26 @@ const routes: Routes = [
       {
         path: "pricechanges",
         component: PriceChangesComponent
+      },
+      {
+        path: "strategy",
+        component: StrategyComponent
+      },
+      {
+        path: "priceminmax",
+        component: PriceMinMaxComponent
+      },
+      {
+        path: "competitorstock",
+        component: CompetitorsStockComponent
+      },
+      {
+        path: "roundprice",
+        component: RoundPriceComponent
+      },
+      {
+        path: "filterproducts",
+        component: FilterProductsComponent
       }
     ]
   },

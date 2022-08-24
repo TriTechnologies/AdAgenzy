@@ -1,1 +1,55 @@
-<p>strategy works!</p>
+<div class="container">
+
+  <!-- Top Section of Add Rules -->
+  <div class="TopContainer ms-5">
+    <h4 class="font-weight-bold">Strategy</h4>
+  </div>
+
+  <!-- Button and Toggles -->
+  <div class="Button ms-5 mt-5">
+
+    <button class="btn btn-primary btn-md col-1" routerLink="/home/addrules" style="border-radius: 20px;">
+      Back
+    </button>
+
+  </div>
+
+  <div class="TableDiv ms-5 me-5 mt-3 shadow-lg">
+
+    <div class="row ms-0">
+
+      <form>
+        <h5 class=" col-lg-12 mt-2"><b>How do you want to respond to competitor prices?</b></h5>
+        <div class="row ms-3">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+                Match cheapest with same price
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+            <label class="form-check-label" for="flexRadioDefault2">
+                Go below cheapest with a lower price
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+            <label class="form-check-label" for="flexRadioDefault3">
+                Not cheapest. Add to price of cheapest competitor
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+            <label class="form-check-label" for="flexRadioDefault4">
+                Do nothing - keep my prices as it is
+            </label>
+          </div>
+          <button class="btn btn-primary mt-3 btnnewbtn col-2" style="border-radius: 20px;" type="submit">Save
+            Settings</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
