@@ -45,6 +45,7 @@ import { FilterProductsComponent } from './filter-products/filter-products.compo
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,7 +77,7 @@ import { FilterProductsComponent } from './filter-products/filter-products.compo
     HttpClientModule,
     ReactiveFormsModule, 
     AmplifyAuthenticatorModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [ProductsService],
   bootstrap: [AppComponent],

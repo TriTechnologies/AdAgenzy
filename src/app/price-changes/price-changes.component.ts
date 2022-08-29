@@ -33,7 +33,6 @@ export class PriceChangesComponent implements OnInit {
     }).then((value)=>{
       console.log(value)
     });
-    
   }
   }
 

@@ -22,30 +22,30 @@
         <h5 class=" col-lg-12 mt-2"><b>How do you want to respond to competitor prices?</b></h5>
         <div class="row ms-3">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value='match_cheapest' [formControl]="strategy_selector">
             <label class="form-check-label" for="flexRadioDefault1">
                 Match cheapest with same price
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+            <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value='below_cheapest' [formControl]="strategy_selector">
             <label class="form-check-label" for="flexRadioDefault2">
                 Go below cheapest with a lower price
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+            <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault3" value='not_cheapest' [formControl]="strategy_selector">
             <label class="form-check-label" for="flexRadioDefault3">
                 Not cheapest. Add to price of cheapest competitor
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+            <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault4" value='do_nothing' [formControl]="strategy_selector">
             <label class="form-check-label" for="flexRadioDefault4">
                 Do nothing - keep my prices as it is
             </label>
           </div>
-          <button class="btn btn-primary mt-3 btnnewbtn col-2" style="border-radius: 20px;" type="submit">Save
+          <button class="btn btn-primary mt-3 btnnewbtn col-2" style="border-radius: 20px;" type="submit" (click)="strategyValue()">Save
             Settings</button>
         </div>
       </form>

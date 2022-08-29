@@ -27,18 +27,18 @@
           to the code of a page.</p>
         <div class="row ms-3">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value='Ignore' [formControl]="stock">
             <label class="form-check-label" for="flexRadioDefault1">
               Ignore competitors with product not in stock
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+            <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value='Include' [formControl]="stock">
             <label class="form-check-label" for="flexRadioDefault2">
               Include competitors with product not in stock
             </label>
           </div>
-          <button class="btn btn-primary mt-3 btnnewbtn col-2" style="border-radius: 20px;" type="submit">Save
+          <button class="btn btn-primary mt-3 btnnewbtn col-2" style="border-radius: 20px;" type="submit" (click)="StockValue()">Save
             Settings</button>
         </div>
       </form>

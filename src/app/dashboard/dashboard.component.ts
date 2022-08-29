@@ -1,8 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import {  IProducts, IProductsData,ICompetitorData } from '../Interfaces/products';
 import { API } from 'aws-amplify';
 import { __values } from 'tslib';
 import { NavigationExtras, TitleStrategy, Router } from '@angular/router';
+
+import Chart from 'chart.js/auto';
+
 
 
 
@@ -15,6 +18,8 @@ import { NavigationExtras, TitleStrategy, Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
 
+
+
   Pitems: any;
   Citems:any;
   CompetitorData?: ICompetitorData[];
@@ -23,8 +28,18 @@ export class DashboardComponent implements OnInit {
   products! : IProducts;
   ProductData?: IProductsData[];
 
+  
+  @ViewChild('barCanvas') barCanvas: ElementRef | undefined;
+  barChart: any;
 
-  constructor() { }
+  constructor() {
+  
+   }
+   ngAfterViewInit(): void {
+    this.ngOnInit();
+  }
+
+
 
   ngOnInit(): void {
     this.userID = JSON.parse(localStorage.getItem('UserID')!) 
@@ -34,6 +49,39 @@ export class DashboardComponent implements OnInit {
       this.Pitems = this.listproducts.length
       localStorage.setItem("listproducts" , JSON.stringify(value))
       console.log(this.listproducts)
+      this.barChart = new Chart(this.barCanvas?.nativeElement, {
+        type: 'bar',
+        data: {
+          labels: ['Products', 'Competitors', 'Highest', 'Cheapest'],
+          datasets: [
+            {
+              label: '',
+              data:[this.listproducts.length,this.CompetitorData?.length],
+              backgroundColor: [
+                'd6efd',
+                'fc107',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+              ],
+              borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+               
+              ],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
     });
 
     //@ts-ignore
@@ -41,6 +89,9 @@ export class DashboardComponent implements OnInit {
       this.CompetitorData = value as ICompetitorData[];
       this.Citems = this.CompetitorData.length
     });
+
+    
   }
+  
 
 }

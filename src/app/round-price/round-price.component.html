@@ -25,30 +25,30 @@
           choose several, then the nearest rounding option will be used.</p>
         <div class="row ms-3">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value='25' [formControl]="rounddownprice">
             <label class="form-check-label" for="flexRadioDefault1">
               to 25 cents (xx.00, xx.25, xx.50, xx.75)
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+            <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value='95' [formControl]="rounddownprice">
             <label class="form-check-label" for="flexRadioDefault2">
               to 95 cents (xx.95)
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+            <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault3" value='99' [formControl]="rounddownprice">
             <label class="form-check-label" for="flexRadioDefault3">
               to 99 cents (xx.99)
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+            <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault4" value='00' [formControl]="rounddownprice">
             <label class="form-check-label" for="flexRadioDefault4">
               to 00 cents (xx.00)
             </label>
           </div>
-          <button class="btn btn-primary mt-3 btnnewbtn col-2" style="border-radius: 20px;" type="submit">Save
+          <button class="btn btn-primary mt-3 btnnewbtn col-2" style="border-radius: 20px;" type="submit" (click)="Rounddownprice()">Save
             Settings</button>
         </div>
       </form>
