@@ -22,14 +22,18 @@ export class DashboardComponent implements OnInit {
 
   Pitems: any;
   Citems:any;
+  Litems: any;
+  Titems:any;
   CompetitorData?: ICompetitorData[];
   listproducts?: IProducts[];
+  manualrepricing?: IProducts[];
   userID: any;
   products! : IProducts;
   ProductData?: IProductsData[];
 
+
   
-  @ViewChild('barCanvas') barCanvas: ElementRef | undefined;
+  @ViewChild('barCanvas') barCanvas!: ElementRef ;
   barChart: any;
 
   constructor() {
@@ -42,26 +46,40 @@ export class DashboardComponent implements OnInit {
 
 
   ngOnInit(): void {
+     //@ts-ignore
+     API.get('AdAgenzyCRUD', '/items/listrepricing/' + this.userID).then((value) =>{
+      console.log(value);
+      this.manualrepricing = value as IProducts[];
+      this.Litems = this.manualrepricing.length
+      this.Titems = this.listproducts!.length - this.manualrepricing!.length
+    });
     this.userID = JSON.parse(localStorage.getItem('UserID')!) 
      //@ts-ignore
      API.get('AdAgenzyCRUD', '/items/listproducts/' + this.userID).then((value) =>{
       this.listproducts = value.Items as IProducts[];
       this.Pitems = this.listproducts.length
       localStorage.setItem("listproducts" , JSON.stringify(value))
-      console.log(this.listproducts)
-      this.barChart = new Chart(this.barCanvas?.nativeElement, {
+      console.log(this.listproducts);
+      
+      this.barChart = new Chart(this.barCanvas!.nativeElement, {
+
         type: 'bar',
         data: {
-          labels: ['Products', 'Competitors', 'Highest', 'Cheapest'],
+          labels: ['Total Products', 'Total Competitors', 'Products Monitored', 'Products Unobserved'],
           datasets: [
             {
+              barPercentage: 0.5,
+              barThickness: 500,
+              maxBarThickness: 100,
+              minBarLength: 2,
+
               label: '',
-              data:[this.listproducts.length,this.CompetitorData?.length],
+              data:[this.Pitems,this.Citems,this.Litems,(this.listproducts!.length - this.manualrepricing!.length)],
               backgroundColor: [
-                'd6efd',
                 'fc107',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
+                'fc107',
+                'fc107',
+                'fc107',
               ],
               borderColor: [
                 'rgba(255,99,132,1)',

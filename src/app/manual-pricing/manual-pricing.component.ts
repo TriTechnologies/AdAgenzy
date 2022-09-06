@@ -15,6 +15,8 @@ export class ManualPricingComponent implements OnInit {
   products! : IProducts;
   CompetitorData!: ICompetitorData[];
   userID: any;
+  mitems:any;
+  searchText!: string;
 
   newPrice = new FormControl;
 
@@ -28,6 +30,7 @@ export class ManualPricingComponent implements OnInit {
     API.get('AdAgenzyCRUD', '/items/listrepricing/' + this.userID).then((value) =>{
       console.log(value);
       this.listproducts = value as IProducts[];
+      this.mitems = this.listproducts.length;
     })
   }
 

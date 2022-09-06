@@ -61,15 +61,15 @@
         </th>
         <th scope="col">Product Name</th>
         <th scope="col">ID/SKU</th>
-        <th scope="col">Cost Price</th>
+        <!-- <th scope="col">Cost Price</th> -->
         <th scope="col">My Price</th>
-        <th scope="col">Shipping Cost</th>
-        <th scope="col">Price Match</th>
+        <!-- <th scope="col">Shipping Cost</th> -->
+        <!-- <th scope="col">Price Match</th> -->
         <th scope="col">Stock</th>
-        <th scope="col">Gross Profit</th>
-        <th scope="col">Gross Profit Ratio</th>
-        <th scope="col">Info</th>
-        <th scope="col">Position</th>
+        <!-- <th scope="col">Gross Profit</th>
+        <th scope="col">Gross Profit Ratio</th> -->
+        <!-- <th scope="col">Info</th>
+        <th scope="col">Position</th> -->
         <th scope="col"></th>
         <th scope="col"></th>
       </tr>
@@ -87,16 +87,16 @@
         <td>{{products?.ProductData?.PRODUCT_NAME}}</td>
         <td *ngIf=" products!.ProductData.Product_ID === '' ">NULL</td>
         <td *ngIf=" products!.ProductData.Product_ID != '' ">{{products!.ProductData.Product_ID}}</td>
-        <td>-</td>
+        <!-- <td>-</td> -->
         <td>${{products?.ProductData?.Product_Price}}</td>
-        <td>-</td>
-        <td>-</td>
+        <!-- <td>-</td>
+        <td>-</td> -->
         <td>{{products?.ProductData?.Product_Stock}}</td>
+        <!-- <td>-</td>
         <td>-</td>
         <td>-</td>
-        <td>-</td>
-        <td>Undefined</td>
-        <td>
+        <td>Undefined</td> -->
+        <!-- <td>
           <button class="btn btn-primary btn-sm tablebtnSecondary mt-1" style="border-radius: 20px;">
             Change Price
           </button>
@@ -108,8 +108,8 @@
             </svg>
 
           </button>
-        </td>
-        <td>
+        </td> -->
+        <!-- <td>
           <button class="btn btn-sm btntable float-end">
             <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -117,7 +117,7 @@
                 fill="#184777" />
             </svg>
           </button>
-        </td>
+        </td> -->
       </tr>
     </tbody>
   </table>

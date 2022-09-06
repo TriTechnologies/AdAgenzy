@@ -98,12 +98,16 @@ thead {
 
 .divText {
   color: #184777;
+}
+.divTextt{
   margin-right: 35%;
+  color: #184777;
+
 }
 
-.form-control {
+/* .form-control {
   border-radius: 24px;
-}
+} */
 
 .btn-primary-form {
   border-radius: 24px;

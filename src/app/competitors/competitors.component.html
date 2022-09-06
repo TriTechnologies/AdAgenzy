@@ -5,29 +5,47 @@
     <h3 class="font-weight-bold">Competitors</h3>
   </div>
 
+
+  <button class="btn btn-primary btn-md float-end me-5 mt-3" style="border-radius: 20px;" (click)="results()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+      <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+      <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+    </svg> Export to CSV
+  </button>
+
   <!-- Button and Toggles -->
-  <div class="Button ms-5 mt-5">
 
-    <button class="btn btn-primary btn-md dropdown-toggle float-start" style="border-radius: 20px;">
+    <!-- <button class="btn btn-primary btn-md dropdown-toggle float-start" style="border-radius: 20px;">
       + Add Filters
-    </button>
+    </button> -->
+    
 
-    <p class="Text mt-2 me-2 ms-5 float-start">Items per page</p>
+    
+  
 
-    <button class="btn btn-primary btn-md me-5" style="border-radius: 20px;">
+  <div class="  d-flex justify-content-center align-items-center Button ms-5 mt-5">
+
+
+  <p class="Text mt-2 me-2 ms-5 ">Items per page</p>
+
+    <button class="btn btn-primary  btn-md me-5" style="border-radius: 20px;">
       {{items}}
     </button>
-
-    <button class="btn btn-primary btn-md float-end me-5" style="border-radius: 20px;" (click)="results()">
-      Export to CSV
-    </button>
-
   </div>
 
+  <ng-template #loading>
+    <iframe class="d-flex flex-row justify-content-center" style="margin-left: 45%; margin-top: 15%; width: 100%; height: 20vh;"
+      src="../../assets//Iphone-spinner-2.gif"></iframe>
+  </ng-template>
   
 
   <!-- Table Data -->
   <div class="TableDiv ms-5 me-5 mt-3">
+    <div class="form-group" >
+      <input type="text" class="form-control" placeholder="Search Here" [(ngModel)]="searchText">
+  </div>
+    <div *ngIf="CompetitorData; else loading">
+      <div *ngIf="CompetitorData.length > 0; else load">
     <table class="table tableStyle table-borderless table-sm">
       <thead>
         <tr>
@@ -36,7 +54,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let products of CompetitorData, let i = index">
+        <tr *ngFor="let products of CompetitorData | filter:searchText">
            <!-- <th scope="row" > 
             <div class="mb-1">
               <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -97,6 +115,22 @@
         </tr> -->
       </tbody>
     </table>
+    </div>
+    </div>
+
+    <ng-template #load>
+      <div class="down">
+        <table class="table tableStyle table-borderless table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Competitors</th>
+              <th scope="col">Store Links</th>
+            </tr>
+          </thead>
+        </table>
+        <h3 style="text-align: center;">List is empty</h3>
+      </div>
+    </ng-template>
   </div>
 
 </div>

@@ -15,7 +15,8 @@ export class CompetitorsComponent implements OnInit {
   CompetitorData?: ICompetitorData[];
   products! : IProducts;
   userID: any;
-  items:any
+  items:any;
+  searchText!: string;
 
   constructor() {
     this.userID = JSON.parse(localStorage.getItem('UserID')!)

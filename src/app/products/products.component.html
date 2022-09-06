@@ -8,9 +8,9 @@
   <!-- Button and Toggles -->
   <div class="Button ms-5 mt-4">
 
-    <button class="btn btn-primary btn-md dropdown-toggle" data-bs-toggle="dropdown" style="border-radius: 20px;">
+    <!-- <button class="btn btn-primary btn-md dropdown-toggle" data-bs-toggle="dropdown" style="border-radius: 20px;">
       All Products
-    </button>
+    </button> -->
 
     <button class="btn btn-primary btn-md ms-2 dropdown-toggle" data-bs-toggle="collapse"
       data-bs-target="#ToggleCollapse" aria-expanded="false" aria-controls="ToggleCollapse"
@@ -26,103 +26,110 @@
 
           <div class="row">
             <div class="col-lg-12">
+
+              
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault" (click)="IDSku()">
                 <label class="form-check-label" for="flexCheckDefault" style="font-size: medium; font-weight: lighter;">
                   ID/SKU
                 </label>
               </div>
 
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
+              <!-- <div class="form-check">
+                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault" >
                 <label class="form-check-label" for="flexCheckDefault" style="font-size: medium; font-weight: lighter;">
                   Cost Price
                 </label>
-              </div>
+              </div> -->
 
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault" (click)="MyPrice()">
                 <label class="form-check-label" for="flexCheckDefault" style="font-size: medium; font-weight: lighter;">
                   My Price
                 </label>
               </div>
 
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
+              <!-- <div class="form-check">
+                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault" >
                 <label class="form-check-label" for="flexCheckDefault" style="font-size: medium; font-weight: lighter;">
                   Shipping Cost
                 </label>
-              </div>
+              </div> -->
 
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault" (click)="Stock()">
                 <label class="form-check-label" for="flexCheckDefault" style="font-size: medium; font-weight: lighter;">
                   Stock
                 </label>
               </div>
 
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
+              <!-- <div class="form-check">
+                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault" >
                 <label class="form-check-label" for="flexCheckDefault" style="font-size: medium; font-weight: lighter;">
                   Gross Profit
                 </label>
-              </div>
+              </div> -->
 
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
+              <!-- <div class="form-check">
+                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault" >
                 <label class="form-check-label" for="flexCheckDefault" style="font-size: medium; font-weight: lighter;">
                   Gross Profit Ratio
                 </label>
-              </div>
+              </div> -->
 
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
+              <!-- <div class="form-check">
+                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault" >
                 <label class="form-check-label" for="flexCheckDefault" style="font-size: medium; font-weight: lighter;">
                   Position
                 </label>
-              </div>
+              </div> -->
 
             </div>
           </div>
 
-          <div class="mt-3 d-flex justify-content-center">
+          <!-- <div class="mt-3 d-flex justify-content-center">
             <button type="submit" class="btn btn-primary-form FormBtn">Apply</button>
-          </div>
+          </div> -->
 
         </form>
       </div>
     </div>
 
     <button class="btn btn-primary btn-md float-end me-5" style="border-radius: 20px;" (click)="results()">
-      Export to CSV
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+      </svg> Export to CSV 
     </button>
+    
 
   </div>
 
 
-  <div class="Button ms-5 mt-3">
+  <div class="  d-flex justify-content-center align-items-center Button ms-5 mt-3">
 
-    <button class="btn btn-primary btn-md" data-bs-toggle="collapse" data-bs-target="#FiltersCollapse"
+    <!-- <button class="btn btn-primary btn-md" data-bs-toggle="collapse" data-bs-target="#FiltersCollapse"
       aria-expanded="false" aria-controls="FiltersCollapse" style="border-radius: 20px;">
       + Add Filters
-    </button>
-
+    </button> -->
+<!-- 
     <button class="btn btn-primary btn-md ms-2" style="border-radius: 20px;">
       Saved Filters
-    </button>
+    </button> -->
+    <p class=" Text  mt-2 me-4">Items per page</p>
 
-    <button class="btn btn-primary btn-md float-end me-5" style="border-radius: 20px;">
+
+    <button class=" btn btn-primary btn-md  me-5" style="border-radius: 20px;">
       {{items}}
     </button>
 
-    <p class="Text float-end mt-2 me-4">Items per page</p>
   </div>
 
   <!-- DropDown Menu Add Filter Button -->
-  <div class="collapse collapseDiv ms-5 mt-2 shadow-lg" id="FiltersCollapse">
-    <div class="card card-body CardBodySection">
+  <!-- <div class="collapse collapseDiv ms-5 mt-2 shadow-lg" id="FiltersCollapse">
+    <div class="card card-body CardBodySection"> -->
       <!-- Drop Down for Filters -->
-      <form>
+      <!-- <form>
 
         <div class="divText row">
           <div class="col-lg-12">
@@ -166,9 +173,9 @@
         <div class="mt-3">
           <button type="submit" class="btn btn-primary-form FormBtn">Apply</button>
         </div>
-      </form>
-    </div>
-  </div>
+      </form> -->
+    <!-- </div>
+  </div> -->
 
   <!-- <ng-template #loading>
     <div class="d-flex flex-row justify-content-center" style="width: 100%; height: 100%; background-color: #DBF0FE;">
@@ -177,8 +184,8 @@
   </ng-template> -->
 
   <ng-template #loading>
-    <iframe class="d-flex flex-row justify-content-center" style="width: 100%; height: 60vh;"
-      src="https://embed.lottiefiles.com/animation/113683"></iframe>
+    <iframe class="d-flex flex-row justify-content-center" style="margin-left: 45%; margin-top: 15%; width: 100%; height: 20vh;"
+      src="../../assets//Iphone-spinner-2.gif"></iframe>
   </ng-template>
 
   <!-- Table Data -->
@@ -196,15 +203,11 @@
                 <input type="checkbox" id="checkboxAll" class="mt-2" name="selectall" autocomplete="on">
               </div>
             </th>
-            <th scope="col">Product Name</th>
-            <th scope="col">ID/SKU</th>
-            <th scope="col">Cost Price</th>
-            <th scope="col">My Price</th>
-            <th scope="col">Shipping Cost</th>
-            <th scope="col">Stock</th>
-            <th scope="col">Gross Profit</th>
-            <th scope="col">Gross Profit Ratio</th>
-            <th scope="col">Position</th>
+            <th scope="col" >Products Name</th>
+            <th scope="col" *ngIf="IdSku">ID/SKU</th>
+            <th scope="col"  *ngIf="myPrice">My Price</th>
+            <th scope="col" *ngIf="stock">Stock</th>
+        
             <th scope="col"></th>
             <th scope="col"></th>
             <th scope="col"></th>
@@ -227,15 +230,10 @@
               </div>
               <p class="float-start">{{products.ProductData.PRODUCT_NAME}}</p>
             </td>
-            <td *ngIf=" products.ProductData.Product_ID === '' ">NULL</td>
-            <td *ngIf=" products.ProductData.Product_ID != '' ">{{products.ProductData.Product_ID}}</td>
-            <td>-</td>
-            <td>${{products.ProductData.Product_Price}}</td>
-            <td>-</td>
-            <td>{{products.ProductData.Product_Stock}}</td>
-            <td>-</td>
-            <td>-</td>
-            <td>Undefined</td>
+            <td *ngIf=" products.ProductData.Product_ID === '' && IdSku"  >NULL</td>
+            <td *ngIf=" products.ProductData.Product_ID != '' && IdSku" >{{products.ProductData.Product_ID}}</td>
+            <td *ngIf="myPrice">${{products.ProductData.Product_Price}}</td>
+            <td *ngIf="stock">{{products.ProductData.Product_Stock}}</td>
             <td>
               <!-- <button class="btn btn-primary btn-sm tablebtn mt-1" style="border-radius: 20px;">
                 Enable Monitoring
@@ -256,7 +254,7 @@
   
               </button>
             </td>
-            <td>
+            <!-- <td>
               <button class="btn btn-sm btntable float-end">
                 <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -266,10 +264,10 @@
   
   
               </button>
-            </td>
+            </td> -->
           </tr>
   
-          <tr>
+          <!-- <tr>
             <th scope="row">
               <div data-toggle="buttons">
                 <input type="checkbox" id="checkbox2" class="chkboxname mt-2 " name="check_1">
@@ -277,7 +275,6 @@
             </th>
             <td>
               <div class="float-start me-3">
-                <!-- Product Image -->
                 <svg class="float-start" width="35" height="35" viewBox="0 0 288 177" fill="none"
                   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <rect width="288" height="177" fill="url(#pattern0)" />
@@ -331,7 +328,7 @@
                 </svg>
               </button>
             </td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>   
     </div>

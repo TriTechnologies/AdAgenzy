@@ -43,16 +43,15 @@ import { animate, keyframes, state, style, transition, trigger } from '@angular/
 export class ProductsComponent implements OnInit {
 
 
-
+  myPrice: boolean = true ;
+  IdSku: boolean = true;
+  stock:boolean = true;
   searchText!: string;
   listproducts?: IProducts[];
   products? : IProducts;
   CompetitorData!: ICompetitorData[];
   userID: any;
-
-
   ProductData?: IProductsData[];
-
   items:any
 
 
@@ -116,5 +115,21 @@ export class ProductsComponent implements OnInit {
       new ngxCsv(this.ProductData, 'Products Report', options)   
     
   }
+
+  MyPrice() {
+
+    this.myPrice = ! this.myPrice;
+    
+    }
+    IDSku() {
+
+      this.IdSku  = ! this.IdSku;
+      
+      }
+    Stock() {
+
+      this.stock  = ! this.stock;
+        
+        }
 
 }
