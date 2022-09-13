@@ -13,6 +13,7 @@
     </button>
 
   </div>
+  <form action=""  [formGroup]="form">
 
   <div class="TableDiv ms-5 me-5 mt-3 shadow-lg">
 
@@ -25,18 +26,14 @@
       <div class="col-lg-6 mt-3">
         <div class="mb-3">
           <label for="Rule Title" class="form-label">Rule Title</label>
-          <input type="rule" formControlName="rule" class="form-control" id="rule" aria-describedby="url">
+          <input type="rule" name="rule" formControlName="rule" class="form-control" id="rule" aria-describedby="url">
         </div>
         <div class="mb-3">
           <p>Priority (bigger value will match first)</p>
-          <input type="value" formControlName="value" class="form-control length" id="value" value="50"
+          <input type="value" name="priority" formControlName="priority" class="form-control length" id="value" value="50"
             aria-describedby="url">
         </div>
-        <div class="mb-3">
-          <button class="btn btn-primary btn-md btnnewbtn col-3" style="border-radius: 20px;">
-            Save Settings
-          </button>
-        </div>
+       
       </div>
 
     </div>
@@ -49,7 +46,29 @@
 
       <div class="col-lg-3 mt-3">
         <p style="font-family: italic;">Suggestion</p>
-        <button class="SettingsBtn" routerLink="/home/pricechanges"><b>Change Settings</b></button>
+        <button class="SettingsBtn"  data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><b>Change Settings</b></button>
+
+    <!--  -->
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body" style="width: 310%;">
+        <div class="form-check">
+          <input class="form-check-input" type="radio"  id="flexRadioDefault1" [value]='false' name="setting_flag" formControlName="setting_flag">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Make Suggestions. Price changes aproved mannualy.
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input mt-2" type="radio"  id="flexRadioDefault2" [value]='true' name="setting_flag" formControlName="setting_flag">
+          <label class="form-check-label" for="flexRadioDefault2">
+            Automatically. Price changes done by monitoring service immiediately
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+        
+
       </div>
 
       <div class="col-lg-6 mt-3">
@@ -67,8 +86,40 @@
 
       <div class="col-lg-3 mt-3">
         <p style="font-family: italic;">Match cheapest with same price</p>
-        <button class="SettingsBtn" routerLink="/home/strategy"><b>Change Settings</b></button>
+        <button class="SettingsBtn" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample"><b>Change Settings</b></button>
       </div>
+
+      <!--  -->
+    <div class="collapse" id="collapseExample1">
+      <div class="card card-body">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="flexRadioDefault1" value='match_cheapest' name="strategy_selector" formControlName="strategy_selector">
+          <label class="form-check-label" for="flexRadioDefault1">
+              Match cheapest with same price
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input mt-2" type="radio" id="flexRadioDefault2" value='below_cheapest' name="strategy_selector" formControlName="strategy_selector">
+          <label class="form-check-label" for="flexRadioDefault2">
+              Go below cheapest with a lower price
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input mt-2" type="radio" id="flexRadioDefault3" value='not_cheapest' name="strategy_selector" formControlName="strategy_selector">
+          <label class="form-check-label" for="flexRadioDefault3">
+              Not cheapest. Add to price of cheapest competitor
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input mt-2" type="radio"  id="flexRadioDefault4" value='do_nothing' name="strategy_selector" formControlName="strategy_selector">
+          <label class="form-check-label" for="flexRadioDefault4">
+              Do nothing - keep my prices as it is
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
 
       <div class="col-lg-6 mt-3">
         <p>How do you want to respond to competitor prices?</p>
@@ -84,8 +135,34 @@
 
       <div class="col-lg-3 mt-3">
         <p style="font-family: italic;">Disabled - no repricing at the moment <b class="bold-italic">Miniumum price Maximum Price</b></p>
-        <button class="SettingsBtn" routerLink="/home/priceminmax"><b>Change Settings</b></button>
+        <button class="SettingsBtn" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample"><b>Change Settings</b></button>
       </div>
+
+         <!--  -->
+    <div class="collapse" id="collapseExample2">
+      <div class="card card-body">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value='disabled' name="restrictions" formControlName="restrictions">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Disabled - no repricing at the moment
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value='standard' name="restrictions" formControlName="restrictions">
+          <label class="form-check-label" for="flexRadioDefault2">
+            Standard/normal price
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault3" value='special_price' name="restrictions" formControlName="restrictions">
+          <label class="form-check-label" for="flexRadioDefault3">
+            Special price (compare at price)
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
 
       <div class="col-lg-6 mt-3">
         <p>We currently support updating the new price into special price and
@@ -104,8 +181,30 @@
 
       <div class="col-lg-3 mt-3">
         <p style="font-family: italic;">Include competitors with product not in stock</p>
-        <button class="SettingsBtn" routerLink="/home/competitorstock"><b>Change Settings</b></button>
+        <button class="SettingsBtn" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample"><b>Change Settings</b></button>
       </div>
+
+         <!--  -->
+    <div class="collapse" id="collapseExample3">
+      <div class="card card-body">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value='Ignore' name="stock" formControlName="stock">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Ignore competitors with product not in stock
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value='Include' name="stock" formControlName="stock">
+          <label class="form-check-label" for="flexRadioDefault2">
+            Include competitors with product not in stock
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+
+      
 
       <div class="col-lg-6 mt-3">
         <p>How do you want to respond to prices of competitors which do not
@@ -124,8 +223,40 @@
       </div>
 
       <div class="col-lg-3 mt-3">
-        <button class="SettingsBtn" routerLink="/home/roundprice"><b>Change Settings</b></button>
+        <button class="SettingsBtn" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample"><b>Change Settings</b></button>
       </div>
+
+         <!--  -->
+    <div class="collapse" id="collapseExample4">
+      <div class="card card-body">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value='25' name="rounddownprice" formControlName="rounddownprice">
+          <label class="form-check-label" for="flexRadioDefault1">
+            to 25 cents (xx.00, xx.25, xx.50, xx.75)
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value='95' name="rounddownprice" formControlName="rounddownprice">
+          <label class="form-check-label" for="flexRadioDefault2">
+            to 95 cents (xx.95)
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault3" value='99' name="rounddownprice" formControlName="rounddownprice">
+          <label class="form-check-label" for="flexRadioDefault3">
+            to 99 cents (xx.99)
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="flexRadioDefault4" value='00' name="rounddownprice" formControlName="rounddownprice">
+          <label class="form-check-label" for="flexRadioDefault4">
+            to 00 cents (xx.00)
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
 
       <div class="col-lg-6 mt-3">
         <p>A price that is only calculated by a robot might not look nice - such
@@ -142,11 +273,87 @@
       </div>
 
       <div class="col-lg-3 mt-3">
-        <button class="SettingsBtn" routerLink="/home/filterproducts"><b>Change Settings</b></button>
+        <button class="SettingsBtn" data-bs-toggle="collapse" data-bs-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample"><b>Change Settings</b></button>
       </div>
 
+         <!--  -->
+    <div class="collapse" id="collapseExample5">
+      <div class="card card-body">
+          <h5 class="col-lg-12 mt-2"><b>Filter products</b></h5>
+          <div class="row ms-3">
+            <div class="form-check">
+              <input class="form-check-input" type="radio"  id="flexRadioDefault1"  value='byproducts'  formControlName="filterproductrules">
+              <label class="form-check-label" for="flexRadioDefault1">
+                By favorite products
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input mt-2" type="radio"  id="flexRadioDefault2" value='bybrands'  formControlName="filterproductrules">
+              <label class="form-check-label" for="flexRadioDefault2">
+                By favorite brands
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input mt-2" type="radio"  id="flexRadioDefault3" value='bycategories'  formControlName="filterproductrules">
+              <label class="form-check-label" for="flexRadioDefault3">
+                By favorite categories
+              </label>
+            </div>
+          </div>
+  
+          <h5 class="col-lg-12 mt-3"><b>Matching criteria</b></h5>
+          <div class="row ms-3">
+            <div class="form-check">
+              <input class="form-check-input mt-2" type="radio"  id="flexRadioDefault4" value='any'  formControlName="matchingcriteria">
+              <label class="form-check-label mt-1" for="flexRadioDefault">
+                Any
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input mt-2" type="radio"  id="flexRadioDefault5" value='all'  formControlName="matchingcriteria">
+              <label class="form-check-label mt-1" for="flexRadioDefault">
+                All
+              </label>
+            </div>
+          </div>
+  
+          <h5 class=" col-lg-12 mt-3"><b>Use only favorite competitors on repricing</b></h5>
+          <div class="row ms-3">
+            <div class="form-check">
+              <input class="form-check-input mt-2" type="radio"  id="flexRadioDefault" value='yes'  formControlName="fvtcompetitors">
+              <label class="form-check-label mt-1" for="flexRadioDefault">
+                Yes
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input mt-2" type="radio"  id="flexRadioDefault7" value='no'  formControlName="fvtcompetitors">
+              <label class="form-check-label mt-1" for="flexRadioDefault7">
+                No
+              </label>
+            </div>
+          </div>
+          <h5 class="col-lg-12 mt-3"><b>Filter products by Brands</b></h5>
+          <input type="rule"  class="form-control col-lg-4 ms-2"  id="filterbrands"  formControlName="filterbrands">
+  
+          <h5 class="col-lg-12 mt-4"><b>Filter products by Category</b></h5>
+          <input type="rule"  class="form-control col-lg-4 ms-2"  id="filtercategory"  formControlName="filtercategory">
+  
+         
+      </div>
     </div>
 
+    <!--  -->
+
+    <div class="mb-3">
+      <button class="btn btn-primary float-end m-2 btn-md btnnewbtn col-2" style="border-radius: 20px;" (click)="SaveSettings()">
+        Save Settings
+      </button>
+    </div>
+
+    </div>
+   
+
   </div>
+</form>
 
 </div>
